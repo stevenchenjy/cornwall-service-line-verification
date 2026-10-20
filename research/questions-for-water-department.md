@@ -1,11 +1,14 @@
-# Draft questions — not sent
+# Minimum baseline and workflow request — draft, not sent
 
-- Which Cornwall-on-Hudson locality records belong to your water system? Are lines in other localities also part of it? Can you provide the PWS ID and current service boundary?
-- Is a current inventory available with stable service-line IDs, update dates, material labels and evidence methods for both sides? Do repeated public addresses represent multiple units, separate lines, versions or duplicate submissions?
-- Please confirm current_public_side_sl, public_sl_material, customer_sl_material and sl_category, the meanings of Known Other/GSLRR, and acceptable verification evidence.
-- What are the typical staff times, contact rates, evidence-acceptance rates and recheck requirements for resident self-inspection, records review and field inspection? Could a small, separately authorized pilot calibrate these parameters?
-- Which side can be checked during one visit? Do access, excavation or appointments limit joint inspection? Can combined tasks save staff time?
-- How should the department balance cost, fairness, evidence reliability and regulatory deadlines? The model cannot choose these priorities on the department's behalf.
-- Has a similar work-allocation analysis already been completed? Which existing information and geographic aggregation levels may be shared publicly?
+Purpose: determine whether a useful same-resource comparison of verification workflows is feasible. No household identities are needed in the analysis export. Precise addresses can stay in a restricted departmental matching file.
 
-This is an unsent draft. It does not authorize contact with officials or residents or ask residents to excavate public-side lines.
+1. Which public water system and service area should define the study? Please include relevant lines outside the locality filter. Does a department/contractor analysis already address verification workflow or resource allocation, and what decision would a comparison inform?
+2. Could the department provide a current dated inventory with stable pseudonymous line IDs, system membership, both material labels, evidence/method and acceptance status for each side, and the accepted overall category? A local-only crosswalk to public rows can resolve repeated addresses. What do repeated public rows represent?
+3. Please confirm the mapping of `current_public_side_sl`, `public_sl_material`, `customer_sl_material`, `customer_sl_material_1` and `sl_category`. Some public-side metadata descriptions do not match their display labels. Please review examples of each material-gap group and the non-Unknown record with unresolved side information using authoritative records.
+4. What evidence and category-specific rules make an overall classification acceptable? Who reviews resident submissions, conflicting records and inconclusive field evidence? A material name alone is not treated as acceptance in this study.
+5. What is the actual current sequence for each initial gap/evidence state, including failed contact, rejected submissions, repeat attempts, escalation and record updates? This workflow will be the comparison baseline.
+6. Could a defined recent period of anonymized attempt logs be shared? See [schema](../data/schema/verification-attempt-log.schema.json) and [empty template](../data/seed/verification-attempt-log-template.csv). Link attempts for the same case. Include initial state, action, all effort components, unsuccessful outcomes, evidence acceptance and final/follow-up decisions.
+7. If only aggregates exist, provide attempted and accepted-classification counts plus total effort by initial state/action/sequence, including nonresponse, rejected/inconclusive evidence, repeats and joint side outcomes. Do not omit unsuccessful attempts.
+8. Which staff-time or monetary constraint actually binds? Which coverage, access or equity priorities should prevent difficult cases from being repeatedly deferred?
+
+If existing logs are insufficient, a pilot could be designed separately after acceptance rules and the decision target are clear. No sample size or field protocol is prescribed now. No request has been sent; contact or a pilot requires separate user authorization.

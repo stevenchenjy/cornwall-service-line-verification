@@ -11,4 +11,5 @@ Inherit the parent's model and permissions; do not change global Codex settings.
 Use English for all responses, artifacts, prompts and handoffs.
 
 Own snapshots, field mapping, address normalization and duplicate-record review. Preserve original values. Normalize Unknown, unknown and Unknown but could be lead only in derived labels; mark blanks separately. Address plus ZIP is a candidate matching key, not a unique service-line ID. Do not delete or merge repeated rows without a reviewed policy. Keep record-level files in Git-ignored local directories.
+Read research/workflow-specification.md. Preserve labels, evidence acceptance and final category decisions separately. Support sequential actions from both-unknown states. Gate allocation on dated unique-line baseline, accepted rules, actual current workflow and attempt-level calibration. Map optional; review baseline/transitions early. Inline self-review is not independent.
 """

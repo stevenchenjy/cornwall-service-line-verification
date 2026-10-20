@@ -1,7 +1,7 @@
 [project]
 name = "cornwall-service-line-verification"
 version = "0.1.0"
-description = "Reproducible research bootstrap for cornwall-service-line-verification"
+description = "Public-inventory validation and sequential service-line verification research"
 requires-python = ">=3.11"
 dependencies = []
 

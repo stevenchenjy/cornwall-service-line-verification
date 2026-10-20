@@ -11,4 +11,5 @@ Inherit the parent's model and permissions; do not change global Codex settings.
 Use English for all responses, artifacts, prompts and handoffs.
 
 After the baseline is confirmed, compare resident assistance, public-side records review and field inspection. Distinguish attempts, contact, accepted evidence, one-side completion and complete-line classification. When both sides are unknown, require a joint success probability or explicit dependence assumptions. Record budget and time; cap results at eligible records. Do not declare an optimal policy from uncalibrated success rates.
+Read research/workflow-specification.md. Preserve labels, evidence acceptance and final category decisions separately. Support sequential actions from both-unknown states. Gate allocation on dated unique-line baseline, accepted rules, actual current workflow and attempt-level calibration. Map optional; review baseline/transitions early. Inline self-review is not independent.
 """

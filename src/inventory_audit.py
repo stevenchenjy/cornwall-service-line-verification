@@ -1,10 +1,10 @@
 """Raw-record diagnostics, never an automatic household or service-line deduplicator."""
-from collections import Counter
+from collections import Counter, defaultdict
 import re
 import unicodedata
 
 KNOWN = {'copper', 'plastic', 'known other', 'lead', 'galvanized', 'galvanized requiring replacement', 'non-lead', 'brass', 'cast iron', 'ductile iron', 'steel', 'asbestos cement'}
-UNKNOWN = {'unknown', 'unknown but could be lead'}
+UNKNOWN = {'unknown', 'unknown but could be lead', 'unknown but unlikely lead'}
 
 def normalized(value):
     return ' '.join(unicodedata.normalize('NFKC', str(value or '')).split()).casefold()
@@ -61,6 +61,21 @@ def audit(rows):
                 exact_address_zip_duplicates=duplicate_summary(rows), conservative_normalized_duplicates=duplicate_summary(rows,True),
                 unmapped_material_labels=unmapped,
                 nonunknown_category_rows_with_unknown_or_missing_material=sum(normalized(r.get('sl_category'))!='unknown' and gap(r)!='both_reported_known' for r in rows))
+
+def repeated_record_diagnostics(rows):
+    groups = defaultdict(list)
+    for row in rows:
+        key = address_key(row, True)
+        if key is not None:
+            groups[key].append(row)
+    repeated = [group for group in groups.values() if len(group) > 1]
+    fields = ['current_public_side_sl', 'public_sl_material', 'customer_sl_material', 'customer_sl_material_1', 'sl_category']
+    return dict(
+        repeated_groups=len(repeated),
+        identical_payload_groups=sum(all(row == group[0] for row in group) for group in repeated),
+        identical_material_method_category_groups=sum(len({tuple(row.get(f) for f in fields) for row in group}) == 1 for group in repeated),
+        differing_category_groups=sum(len({row.get('sl_category') for row in group}) > 1 for group in repeated),
+        decision='Unresolved candidates; no automatic merge or deletion')
 
 def expected_complete(attempts, eligible_records, accepted_complete_probability):
     if not isinstance(attempts, int) or not isinstance(eligible_records, int) or attempts < 0 or eligible_records < 0:

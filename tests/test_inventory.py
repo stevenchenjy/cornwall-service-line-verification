@@ -2,14 +2,14 @@ from pathlib import Path
 import sys
 import unittest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'src'))
-from inventory_audit import material_state, gap, audit, address_key, expected_complete
+from inventory_audit import material_state, gap, audit, address_key, expected_complete, repeated_record_diagnostics
 
 def row(public='Unknown', customer='Unknown', address='1 Main St', zip_code='12520', category='Unknown'):
     return dict(current_public_side_sl=public,customer_sl_material=customer,street_address=address,zip_code=zip_code,sl_category=category)
 
 class InventoryChecks(unittest.TestCase):
     def test_unknown_variants(self):
-        self.assertEqual([material_state(v) for v in ['unknown',' UNKNOWN ','Unknown but could be lead']], ['unknown']*3)
+        self.assertEqual([material_state(v) for v in ['unknown',' UNKNOWN ','Unknown but could be lead','Unknown but unlikely lead']], ['unknown']*4)
 
     def test_missing_and_unmapped_not_known(self):
         self.assertEqual(material_state(None),'missing')
@@ -46,6 +46,15 @@ class InventoryChecks(unittest.TestCase):
         result=audit([row(category='Non-Lead')])
         self.assertEqual(result['unknown_category_rows'],0)
         self.assertEqual(result['nonunknown_category_rows_with_unknown_or_missing_material'],1)
+
+    def test_repeated_groups_distinguish_identical_and_conflicting_records(self):
+        rows=[row(),row(),row(address='2 Main St'),row(address='2 Main St',category='Non-Lead')]
+        result=repeated_record_diagnostics(rows)
+        self.assertEqual(result['repeated_groups'],2)
+        self.assertEqual(result['identical_payload_groups'],1)
+        self.assertEqual(result['identical_material_method_category_groups'],1)
+        self.assertEqual(result['differing_category_groups'],1)
+        self.assertEqual(len(rows),4)
 
 if __name__ == '__main__':
     unittest.main()

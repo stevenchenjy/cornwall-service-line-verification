@@ -1,17 +1,12 @@
 # Current status
 
-Stage: bootstrap / pre-research. Setup date: 2026-10-19 (America/New_York).
+Stage: active research — public-snapshot validation and workflow specification. Revision date: October 19, 2026 (America/New_York).
 
-- User supplied two scoped preliminary proposals. This repository contains only **cornwall-service-line-verification**.
-- Agents are configured, not running continuously. Full historical extraction, modeling and independent research review have not started.
-- `reports/preflight.md` records actual retrieval and diagnostic results; it is not a final research finding.
-- No department contact, fieldwork, resident outreach or external report delivery has occurred.
-- Next: L01: confirm the locality-to-water-system boundary, field meanings and duplicate-record policy before establishing an auditable baseline.
+- [Snapshot validation](../reports/baseline-validation.md) reproduces 1,110 raw locality records / 808 Unknown, with gaps 575 both, 176 public only and 57 customer only. These are not current unique-line or household counts.
+- All 43 repeated key groups have differing material/method/category combinations; 12 have differing overall categories. No rows were merged or removed. The public data do not establish why they differ.
+- A [sequential workflow specification](workflow-specification.md) and deterministic synthetic tests allow public-record review followed by resident assistance. Labels, submitted/accepted evidence and final category decisions remain separate.
+- Costs, rates, actual current workflow and acceptance rules remain uncalibrated. A dated department-confirmed baseline, stable line IDs, field semantics and acceptance policy are still missing. Strategy modeling is gated.
+- The [focused request](questions-for-water-department.md), anonymized attempt schema and initial literature note are prepared. Maps are optional; further agent/runtime setup is paused.
+- Next: independent review of the baseline/transition contract and, when authorized, obtain the minimum departmental confirmations and attempt data. No outreach has occurred.
 
-Required before a final study: reconcile source definitions, resolve relevant data quality issues, review the actual output and document remaining uncertainty.
-
-Local `make check` passed: 8 domain checks plus 2 language regression cases and structure/TOML validation. Custom-agent runtime dispatch has not been exercised; configuration files follow the current official schema.
-
-Language policy: English throughout all authored content, agent instructions, prompts and future responses. Earlier conversation messages and historical commits remain historical records.
-
-Repository access: public, explicitly requested by the user on October 19, 2026. Anonymous GitHub API access was verified. Raw evidence and record-level working files remain local-only.
+Existing roles were used sequentially inline; no child agent or independent reviewer ran. No optimal strategy, current unique-line total, individual health-risk estimate, departmental endorsement or fieldwork is established. English remains required; raw/row-level data stay local and ignored in this public repository.

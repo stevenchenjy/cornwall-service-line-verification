@@ -1,11 +1,24 @@
 {
-  "status": "template_requires_calibration",
-  "unit": "minutes_per_attempt",
-  "outcome": "accepted_complete_line_classification",
+  "status": "blocked_pending_baseline_acceptance_rules_and_attempt_calibration",
+  "outcome": "documented_department_accepted_category",
+  "specification": "research/workflow-specification.md",
+  "baseline_policy": null,
+  "acceptance_policy_reference": null,
+  "confirmed_unique_line_count": null,
+  "staff_time_budget_minutes": null,
+  "coverage_priorities": null,
   "actions": [
-    {"name": "resident_assisted", "eligible_gap": "customer_unknown", "minutes_per_attempt": null, "contact_probability": null, "accepted_given_contact_probability": null},
-    {"name": "public_records", "eligible_gap": "public_unknown", "minutes_per_attempt": null, "accepted_probability": null},
-    {"name": "joint_field_visit", "eligible_gap": "both_unknown", "minutes_per_attempt": null, "joint_accepted_probability": null}
+    {"name":"public_records","targets":["public"],"eligible":"unaccepted_public_evidence_including_both_unknown","minutes_per_attempt":null,"transition_probabilities":null},
+    {"name":"resident_assisted","targets":["customer"],"eligible":"unaccepted_customer_evidence_including_both_unknown","minutes_per_attempt":null,"transition_probabilities":null},
+    {"name":"field_public","targets":["public"],"eligible":"unaccepted_public_evidence","minutes_per_attempt":null,"transition_probabilities":null},
+    {"name":"field_customer","targets":["customer"],"eligible":"unaccepted_customer_evidence","minutes_per_attempt":null,"transition_probabilities":null},
+    {"name":"joint_field_visit","targets":["public","customer"],"eligible":"at_least_one_side_has_unaccepted_evidence","minutes_per_attempt":null,"joint_transition_probabilities":null}
   ],
-  "note": "Nulls intentionally prevent invented local costs or success rates. Joint completion is not assumed independent."
+  "candidate_sequences": [
+    {"name":"current_department_workflow","steps":null},
+    {"name":"records_then_resident_then_targeted_field","steps":["public_records","resident_assisted","field_for_remaining_evidence"]},
+    {"name":"joint_field_for_eligible_cases","steps":["joint_field_visit"]}
+  ],
+  "retry_and_escalation_policy":null,
+  "note":"Design contract only. Null parameters prevent invented local rates, costs, retry rules or strategy rankings. Candidate sequences require department review."
 }

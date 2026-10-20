@@ -1,11 +1,12 @@
 # Task board
 
-| ID | Work | Owner role | Status | Acceptance criteria |
-|---|---|---|---|---|
-| L00 | Workspace, agents, snapshot and preflight | research_lead | complete_local | Reproducible query, hashes, raw-row definitions and offline checks |
-| L01 | Field semantics, system boundary and duplicate-record policy | data_steward | next | Locality kept distinct from system membership; repeated keys not automatically merged |
-| L02 | Material and verification-evidence gap baseline for both sides | data_steward | pending L01 | Raw/derived values separated; unknown, missing and unmapped explicit |
-| L03 | Verification actions, staff time and success-rate parameters | workflow_researcher | pending L01 | Parameters sourced or labeled as assumptions; joint success explicit |
-| L04 | Equal-budget strategies and sensitivity analysis | strategy_modeler | pending L02–L03 | Complete classification is the outcome; failures, retries and caps explicit |
-| L05 | Aggregate map and local review queue | data_steward | pending L01 | No external household addresses/coordinates; geographic aggregation reviewed |
-| L06 | Methods review and brief | methods_reviewer | pending L04–L05 | No overstated unique-line totals, verified materials or optimality |
+| ID | Work | Status | Acceptance / next gate |
+|---|---|---|---|
+| L00 | Workspace foundation | complete | Pause further setup/runtime engineering |
+| L01 | Public snapshot/field/repeated-record audit | first pass complete; semantics/boundary pending | Pinned aggregate checks; no auto merge; department review required |
+| L02 | Dated system-specific unique-line baseline | waiting external inputs | Stable IDs, as-of date, membership, side evidence and accepted category |
+| L03 | Sequential action/acceptance contract and attempt schema | draft implemented with synthetic tests | Department approval/current workflow/calibration pending |
+| L03R | Early methods review of baseline and transitions | self-review recorded; independent review pending | Review before optimization; map not required |
+| L04 | Same-resource strategy comparison | gated on L02/L03/L03R | Include actual current practice, failures/retries, uncertainty and coverage priorities |
+| L05 | Aggregated map | optional | Only if geography changes decisions; reviewed privacy/aggregation |
+| L06 | Preliminary design brief then final conditional findings | first design increment | No strategy ranking or accepted unique-line count without evidence |

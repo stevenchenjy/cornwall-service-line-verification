@@ -1,13 +1,17 @@
-# Research brief
+# Research brief — revised direction
 
-**Research question:** Under limited staff time or budget, how should resident self-inspection, public-side records review and field inspection be combined to obtain acceptable, reliable classifications for more complete water service lines?
+**Question:** Which department-approved sequences of records review, resident assistance and field inspection can produce more accepted service-line classifications under the same staff-time constraint, relative to current practice?
 
-**Method:** Public-inventory audit followed by a transparent comparison of resource-allocation scenarios. The primary outcome is resolved complete-record/complete-line classification. One-side completion, contacts and inspection attempts are process measures.
+**Current phase:** Validate the population and evidence semantics; specify action sequences before modeling. The reproducible locality snapshot is a public raw-record audit, not a current system-specific unique-line allocation baseline.
 
-**Initial query boundary:** `lower(locality) = 'cornwall-on-hudson'`. Locality indicates a place, not the whole of Cornwall or a unique water system. The public structure lacks an explicit PWS ID and row-level update date. Confirm system membership, currency and unique-line counts against departmental records.
+**Unit and boundary:** The query `lower(locality) = 'cornwall-on-hudson'` yields 1,110 raw records, including 808 category Unknown. System membership, line IDs and individual as-of dates remain unconfirmed. Relevant utility lines in other localities may be absent. Repeated keys remain unresolved and unmerged.
 
-**In scope:** Field semantics, original categories, material gaps on both sides, duplicate candidates, verification-method evidence and budget scenarios.
+**Outcome contract:** Preserve raw material labels, reviewed evidence for each side and a documented department-accepted overall category separately. Two named materials do not establish acceptance. Some category decisions may legitimately require a different evidence rule; record the department/state rule rather than hard-coding both sides as universally necessary.
 
-**Out of scope:** Predicting resident health risk, treating Unknown as confirmed lead, automatically counting unique households, announcing a best strategy from uncalibrated rates, or unauthorized resident contact and fieldwork.
+**First increment:** [Snapshot validation](../reports/baseline-validation.md), [sequential workflow contract](workflow-specification.md), synthetic transition tests and an [anonymized attempt-log schema](../data/schema/verification-attempt-log.schema.json). Public-record review followed by resident assistance is permitted from both-unknown states. Rates, costs and acceptance policy remain uncalibrated.
 
-**Planned outputs:** Aggregate gap tables and an appropriately aggregated map, scenario results, reproducible code, a local-only departmental review queue and follow-up questions. Review the geographic aggregation and evidence before any public map.
+**Modeling gate:** A dated system-specific baseline, reviewed acceptance rules, current workflow, attempt-level effort/outcomes (including failures and repeats), common resource budget and coverage priorities. Without these, produce conditional design questions rather than a local optimum.
+
+**Outputs:** Aggregate baseline audit, transition specification, focused request, then a same-resource comparison and sensitivity analysis if inputs arrive. Maps are optional when geography changes travel or coverage decisions; they do not block methods review.
+
+No health-risk prediction, Unknown-as-lead interpretation, automatic household deduplication, resident contact or fieldwork is authorized. Departmental use and originality remain unestablished.

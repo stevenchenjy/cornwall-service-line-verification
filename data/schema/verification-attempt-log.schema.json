@@ -1,0 +1,259 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Anonymized verification attempt \u2014 draft request contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "attempt_id",
+    "case_id",
+    "previous_attempt_id",
+    "pws_id",
+    "baseline_as_of",
+    "attempt_date",
+    "initial_public",
+    "initial_customer",
+    "reported_category_before",
+    "action",
+    "outcome",
+    "public_after",
+    "customer_after",
+    "accepted_category_after",
+    "acceptance_rule_ref",
+    "decision_ref",
+    "follow_up_required",
+    "selection_reason",
+    "preparation_minutes",
+    "travel_minutes",
+    "contact_field_minutes",
+    "administration_review_minutes"
+  ],
+  "properties": {
+    "attempt_id": {
+      "type": "string"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "previous_attempt_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "pws_id": {
+      "type": "string"
+    },
+    "baseline_as_of": {
+      "type": "string",
+      "format": "date"
+    },
+    "attempt_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "initial_public": {
+      "type": "object",
+      "required": [
+        "reported_material",
+        "evidence_status"
+      ],
+      "properties": {
+        "reported_material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_status": {
+          "enum": [
+            "unreviewed",
+            "submitted",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "initial_customer": {
+      "type": "object",
+      "required": [
+        "reported_material",
+        "evidence_status"
+      ],
+      "properties": {
+        "reported_material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_status": {
+          "enum": [
+            "unreviewed",
+            "submitted",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "reported_category_before": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "action": {
+      "enum": [
+        "public_records",
+        "resident_assisted",
+        "field_public",
+        "field_customer",
+        "joint_field_visit",
+        "classification_review"
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "evidence_returned",
+        "no_response",
+        "inconclusive",
+        "access_failed",
+        "cancelled",
+        "classification_accepted",
+        "classification_rejected",
+        "classification_deferred"
+      ]
+    },
+    "public_after": {
+      "type": "object",
+      "required": [
+        "reported_material",
+        "evidence_status"
+      ],
+      "properties": {
+        "reported_material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_status": {
+          "enum": [
+            "unreviewed",
+            "submitted",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "customer_after": {
+      "type": "object",
+      "required": [
+        "reported_material",
+        "evidence_status"
+      ],
+      "properties": {
+        "reported_material": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "evidence_status": {
+          "enum": [
+            "unreviewed",
+            "submitted",
+            "accepted",
+            "rejected"
+          ]
+        },
+        "evidence_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "accepted_category_after": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "acceptance_rule_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "decision_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "follow_up_required": {
+      "type": "boolean"
+    },
+    "selection_reason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "preparation_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Observed staff minutes; null means unavailable, never zero-fill."
+    },
+    "travel_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Observed staff minutes; null means unavailable, never zero-fill."
+    },
+    "contact_field_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Observed staff minutes; null means unavailable, never zero-fill."
+    },
+    "administration_review_minutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "minimum": 0,
+      "description": "Observed staff minutes; null means unavailable, never zero-fill."
+    }
+  },
+  "description": "One attempted action including failures. Link repeated attempts with stable pseudonymous case IDs. No names, addresses, coordinates or free-text private notes. References are pseudonymous and underlying evidence remains restricted. Not yet a department-confirmed export specification."
+}

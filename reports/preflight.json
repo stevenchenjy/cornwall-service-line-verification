@@ -30,9 +30,44 @@
     "customer_sl_material": {}
   },
   "nonunknown_category_rows_with_unknown_or_missing_material": 1,
-  "generated_at_utc": "2026-10-20T01:13:42.057554+00:00",
+  "generated_at_utc": "2026-10-20T02:09:08.185452+00:00",
   "snapshot_sha256": "4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a",
   "where": "lower(locality) = 'cornwall-on-hudson'",
-  "stage": "bootstrap_diagnostic",
-  "limitation": "Counts describe public raw records, not current unique households or service lines."
+  "stage": "public_snapshot_validation",
+  "limitation": "Counts describe public raw records, not current unique households or service lines.",
+  "repeated_record_diagnostics": {
+    "repeated_groups": 43,
+    "identical_payload_groups": 0,
+    "identical_material_method_category_groups": 0,
+    "differing_category_groups": 12,
+    "decision": "Unresolved candidates; no automatic merge or deletion"
+  },
+  "recorded_method_counts": {
+    "public_sl_material": {
+      "<missing>": 751,
+      "Records": 297,
+      "Excavation": 45,
+      "Field Inspection": 17
+    },
+    "customer_sl_material_1": {
+      "<missing>": 632,
+      "Field Inspection": 234,
+      "Records": 228,
+      "Excavation": 16
+    }
+  },
+  "known_material_rows_without_recorded_method": {
+    "public": 0,
+    "customer": 0
+  },
+  "model_readiness": {
+    "system_membership": "unconfirmed",
+    "stable_unique_line_ids": "unconfirmed",
+    "row_as_of_dates": "unconfirmed",
+    "field_semantics": "unconfirmed",
+    "accepted_classification_rules": "unconfirmed",
+    "current_workflow_baseline": "unconfirmed",
+    "attempt_level_calibration": "unconfirmed",
+    "resource_and_coverage_priorities": "unconfirmed"
+  }
 }

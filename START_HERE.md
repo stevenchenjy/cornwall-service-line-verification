@@ -1,12 +1,12 @@
 # Start here
 
-1. Read `AGENTS.md`, `research/brief.md` and `research/STATUS.md`.
-2. Run `uv sync --locked && make check`. If local raw sources are absent, run `make fetch` first.
-3. Read `reports/preflight.md`. Separate snapshot-reproduced counts, preliminary leads and verification still required.
-4. Start with the first unfinished task in `research/TASKS.md`. Define the inputs, file ownership, output and acceptance criteria before each task.
+1. Read [AGENTS.md](AGENTS.md), [brief](research/brief.md) and [status](research/STATUS.md).
+2. Inspect the [baseline audit](reports/baseline-validation.md), [transition contract](research/workflow-specification.md) and [early self-review](reports/methods-review.md).
+3. Run `uv sync --locked` and `make check`. `make preflight` requires the ignored pinned raw snapshot; use `make fetch` if absent.
+4. Resolve the documented baseline/acceptance/calibration gates before estimating strategy rankings.
 
-## Suggested first research prompt
+## Next research prompt
 
-> Begin L01: confirm the locality-to-water-system boundary, field meanings and duplicate-record policy before establishing an auditable baseline. Read this project's AGENTS.md, research scope and existing preflight first. Keep evidence, inference and unresolved questions separate. Use English throughout. If team work is explicitly requested, give each role a concrete artifact and non-overlapping write paths, then follow agents/README.md. Do not contact officials or residents.
+> Review the first public-snapshot audit and sequential workflow contract before allocation modeling. Keep raw locality rows distinct from a dated system-specific unique-line baseline. Check repeated groups, field mapping, material labels versus accepted evidence, category-specific acceptance, sequential records/resident actions, failures/retries and full staff effort. Review the focused request and attempt schema. Keep costs and rates null until locally calibrated or explicitly hypothetical. Record what was actually inspected and whether review is independent. Do not send requests or contact residents without authorization. Use English throughout.
 
-Substantive research has not started. Configured agents have not necessarily been invoked or independently reviewed. Invoke `methods_reviewer` after a real analysis artifact exists. The project instructions require English for all future authored content and responses.
+Maps are optional. Do not extend agent/runtime setup; existing roles may be used inline. Spawn child agents only with explicit delegation authorization.

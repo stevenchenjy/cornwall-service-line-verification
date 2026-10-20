@@ -36,6 +36,12 @@ Missing, malformed, unvalidated, mismatched or insufficient evidence yields a **
 
 The [attempt schema](../data/schema/verification-attempt-log.schema.json) distinguishes evidence_review, classification_review and classification_correction. Optional curated fields link validated records, source outcomes and correction history; an existing department export can be mapped without pretending these fields were originally recorded.
 
+## Source-supported intake qualifications - October 20, 2026
+
+The [official-source review](../reports/official-guidance-review.md) supports separate resident submission/staff assessment and documents why historical upstream lead and segment extent may matter to category review. It does not load a local rule or verify a case. The current engine validates supplied side-material evidence patterns; it is not an implementation of all regulatory conditions and cannot itself establish upstream history. An authorized substantive rule/decision review must cover any required historical facts and current applicability before validation. If the real rule cannot be represented adequately, keep acceptance pending and document the representation gap before expanding the engine.
+
+Use the [intake handoff](intake-handoff.md) for baseline/crosswalk and attempt-coverage headers. Nullable effort is preserved during intake even though the synthetic workflow engine requires finite observed effort for execution. Preserve stock versus new-period classifications, same-day action ordering, failed/repeated work and shared person-time before considering a comparison.
+
 ## Modeling gate
 
 A dated stable-ID population, confirmed semantics/acceptance rules, actual current workflow, attempt-level effort/outcomes including failures/reviews/retries, and agreed resource/coverage priorities are all required. Preserve case difficulty, action history and selection reasons before comparing observed rates. Synthetic document/time fixtures demonstrate contract behavior, not Cornwall effectiveness. Maps are optional and no optimizer is being built.

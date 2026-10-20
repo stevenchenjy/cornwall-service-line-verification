@@ -20,3 +20,7 @@ Independent review should first challenge identity/mapping and the transition/ou
 ## Second-review correction - October 20, 2026
 
 The external ChatGPT review found unsupported default-case acceptance, accepted-category overwrite and missing rejected/deferred review events. This session reproduced all three, replaced the boolean/reference interface with pinned validated documentary records, added case/state/category-evidence checks, separated submission/assessment, retained rejected/deferred effort and added an auditable correction path. Synthetic document tests cover valid and invalid countercases. This is not independent human review or authentication of any actual authority; actual rules and department records remain absent.
+
+## Source/intake follow-up - October 20, 2026
+
+The [official-source review](official-guidance-review.md) now supplies dictionary/guidance support for the material/method mapping, while the API's conflicting descriptions remain preserved. Relevant source pages were read and visually inspected inline by the AI session, with exact page coverage/hashes recorded; this is not an independent or human review. Upstream history, segment extent and current applicability must be checked before validating a real rule. The [intake handoff](../research/intake-handoff.md) adds empty baseline/crosswalk/coverage headers, effort/selection rules and review instructions. All 12 independent/departmental cases remain pending and all eight empirical readiness gates remain unconfirmed.

@@ -11,3 +11,5 @@ Code/report defects were reproduced before editing, meaningful regressions and c
 ## Next stage and limits
 
 The next stage is **departmental baseline/operations intake and independent workflow validation**. Concrete checklist, request draft and intake plan are prepared; no third-party contact has been authorized or sent. Human/departmental evidence cannot be substituted by synthetic fixtures, reference strings, hashes or this session's self-review. Explanation/strategy recommendation gates remain in force. The historical first-review response remains a dated record.
+
+Subsequent local evidence increment: [official guidance/dictionary/system-summary inspection](../reports/official-guidance-review.md) and the [baseline/crosswalk/log-coverage handoff](intake-handoff.md) are complete. The official NY3503526 summary is retained as separately dated evidence, not a replacement population. The checklist now has 12 pending review cases, including historical lead, segment ownership and stock-versus-period counting. No current departmental baseline/approval/operations export or independent human review has arrived, and no strategy ranking is released.

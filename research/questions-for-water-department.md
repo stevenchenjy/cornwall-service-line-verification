@@ -11,4 +11,8 @@ Purpose: determine whether a useful same-resource comparison of verification wor
 7. If only aggregates exist, provide attempted and accepted-classification counts plus total effort by initial state/action/sequence, including nonresponse, rejected/inconclusive evidence, repeats and joint side outcomes. Do not omit unsuccessful attempts.
 8. Which staff-time or monetary constraint actually binds? Which coverage, access or equity priorities should prevent difficult cases from being repeatedly deferred?
 
+Source/intake follow-up, October 20: the [official-source check](../reports/official-guidance-review.md) supports the public material/method distinction but does not confirm local export semantics. Please include historical public-side lead evidence, current rule version/effective dates/system-specific approvals and segment-versus-ownership definitions. The [intake handoff](intake-handoff.md) supplies baseline/crosswalk/coverage headers and asks for event-capture completeness, same-day ordering, staff person-time and shared-work accounting. All headers are optional mapping aids; this remains an unsent draft.
+
+The official system directory and summary identify Village of Cornwall-on-Hudson as NY3503526, with a displayed certification date `10/15/24`. Please confirm the study system and reconcile that dated summary with a current stable-ID export and the distinct locality snapshot. Neither a population match nor a time trend is inferred here.
+
 If existing logs are insufficient, a pilot could be designed separately after acceptance rules and the decision target are clear. No sample size or field protocol is prescribed now. No request has been sent; contact or a pilot requires separate user authorization.

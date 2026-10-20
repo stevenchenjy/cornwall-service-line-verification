@@ -1,4 +1,4 @@
-# Field mapping — provisional semantic review
+# Field mapping - documentary support, local confirmation pending
 
 | API field | Display label / analysis use |
 |---|---|
@@ -12,7 +12,11 @@
 | location | Precise geographic point; local-only; external outputs require reviewed aggregation |
 | note | Original notes may contain identifying information; do not publish |
 
-The provisional mapping uses current display labels and observed content and still requires departmental confirmation. Several public-side metadata descriptions appear misaligned; do not rely on those descriptions alone.
+On October 20, 2026, the official Health Data NY attached dictionary (August 2024, physical page 2) and NYSDOH guidance v3 (August 2025, physical page 8, Figure 3-A) were retrieved, text-read and visually inspected. They support the material/method distinction and the headings used above. Metadata connects the API identifiers to those headings; the PDF dictionary itself does not print the API identifiers. See the [source review](../reports/official-guidance-review.md), [page-level evidence table](official-source-evidence.csv) and [retrieval manifest](../data/manifests/official-guidance-intake.json).
+
+The interpretation is `documentary_supported_local_confirmation_pending`. The current API descriptions still discuss historical lead under `current_public_side_sl`, method under `was_public_sl_material_ever`, installation date under `public_sl_material`, and diameter under `public_sl_installation_or`. Retain those original descriptions in `data/schema/inventory-fields.json`; do not silently rewrite source metadata. The dictionary instead defines these as current material, historical lead status, verification method, and installation/replacement date, respectively. This does not authenticate individual rows or confirm Cornwall's local acceptance rules.
+
+Keep historical public-side lead status distinct from current material and retain its supporting evidence. Guidance v3 physical pages 7 and 9 make upstream history and segment extent relevant to interpretation; public/customer column names do not by themselves establish ownership in every system. Confirm the local segment and ownership mapping.
 
 `rowsUpdatedAt` is a dataset-level timestamp, not an update date for Cornwall or any individual line. Do not infer a missing PWS ID from locality.
 

@@ -1,0 +1,235 @@
+{
+  "purpose": "Official NYS guidance and metadata access verification; raw files remain ignored",
+  "attempts": [
+    {
+      "request_started_at_utc": "2026-10-20T15:30:00.865344+00:00",
+      "http_status": 200,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+      "receipt": {
+        "source_id": "nys-guidance-main-retry",
+        "requested_url": "https://www.health.ny.gov/environmental/water/drinking/docs/service_line_inventory_guidance_lcrr.pdf",
+        "resolved_url": "https://www.health.ny.gov/environmental/water/drinking/docs/service_line_inventory_guidance_lcrr.pdf",
+        "retrieved_at_utc": "2026-10-20T15:30:01.130916+00:00",
+        "sha256": "0666dfbeb6e7944f188e38ded9209530d4707cba720be011405d3a2d28bce951",
+        "bytes": 1088035,
+        "content_type": "application/pdf",
+        "local_path": "data/raw/nys-guidance-main-retry-20261020T153001130916Z.pdf"
+      }
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:30:01.137432+00:00",
+      "http_status": 200,
+      "user_agent": "CornwallResearch/0.1 (public-source reproducibility)",
+      "receipt": {
+        "source_id": "nys-guidance-v3-official-back",
+        "requested_url": "https://healthweb-back.health.ny.gov/environmental/water/drinking/docs/service_line_inventory_guidance_lcrr.pdf",
+        "resolved_url": "https://healthweb-back.health.ny.gov/environmental/water/drinking/docs/service_line_inventory_guidance_lcrr.pdf",
+        "retrieved_at_utc": "2026-10-20T15:30:01.319734+00:00",
+        "sha256": "0666dfbeb6e7944f188e38ded9209530d4707cba720be011405d3a2d28bce951",
+        "bytes": 1088035,
+        "content_type": "application/pdf",
+        "local_path": "data/raw/nys-guidance-v3-official-back-20261020T153001319734Z.pdf"
+      }
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:30:01.323411+00:00",
+      "http_status": 200,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+      "receipt": {
+        "source_id": "nys-guidance-index",
+        "requested_url": "https://www.health.ny.gov/environmental/water/drinking/guidance_and_forms.htm",
+        "resolved_url": "https://www.health.ny.gov/environmental/water/drinking/guidance_and_forms.htm",
+        "retrieved_at_utc": "2026-10-20T15:30:01.386754+00:00",
+        "sha256": "0487df8775ae3cce6d37d0526384e81f5516056e6fe42346e8441cef6070eef9",
+        "bytes": 40194,
+        "content_type": "text/html; charset=UTF-8",
+        "local_path": "data/raw/nys-guidance-index-20261020T153001386754Z.html"
+      }
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:30:01.388269+00:00",
+      "http_status": 200,
+      "user_agent": "CornwallResearch/0.1 (public-source reproducibility)",
+      "receipt": {
+        "source_id": "nys-inventory-metadata-intake",
+        "requested_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+        "resolved_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+        "retrieved_at_utc": "2026-10-20T15:30:02.966979+00:00",
+        "sha256": "c4a321119b505b0238db9ec1467c4fe3c13de54c0d04c0d30227e919c0ccf20c",
+        "bytes": 48096,
+        "content_type": "application/json; charset=utf-8",
+        "local_path": "data/raw/nys-inventory-metadata-intake-20261020T153002966979Z.json"
+      }
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:30:52.629592+00:00",
+      "http_status": 200,
+      "receipt": {
+        "source_id": "nys-lsli-data-dictionary",
+        "requested_url": "https://health.data.ny.gov/api/views/j63k-4n92/files/5e17b5f4-794c-4627-a7af-60c6dc181bb0?download=true&filename=NYSDOH_LSLI_Data_Dictionary.pdf",
+        "resolved_url": "https://health.data.ny.gov/api/views/j63k-4n92/files/5e17b5f4-794c-4627-a7af-60c6dc181bb0?download=true&filename=NYSDOH_LSLI_Data_Dictionary.pdf",
+        "retrieved_at_utc": "2026-10-20T15:30:53.219965+00:00",
+        "sha256": "19123110c1577c86a3951014c782c10e40023dc172f2e6f30efe763c5305868c",
+        "bytes": 197053,
+        "content_type": "application/octet-stream",
+        "local_path": "data/raw/nys-lsli-data-dictionary-20261020T153053219965Z.pdf"
+      },
+      "discovered_via": "c4a321119b505b0238db9ec1467c4fe3c13de54c0d04c0d30227e919c0ccf20c"
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:30:53.223042+00:00",
+      "http_status": 200,
+      "receipt": {
+        "source_id": "nys-lsli-overview",
+        "requested_url": "https://health.data.ny.gov/api/views/j63k-4n92/files/26df4877-4aec-4f75-87b7-6fa690e91ad6?download=true&filename=NYSDOH_LSLI_Overview.pdf",
+        "resolved_url": "https://health.data.ny.gov/api/views/j63k-4n92/files/26df4877-4aec-4f75-87b7-6fa690e91ad6?download=true&filename=NYSDOH_LSLI_Overview.pdf",
+        "retrieved_at_utc": "2026-10-20T15:30:53.682424+00:00",
+        "sha256": "826f1d714fdad2735da96896cb4c936a9e3458bd69d42e8b76bcbb3afb177c84",
+        "bytes": 148393,
+        "content_type": "application/octet-stream",
+        "local_path": "data/raw/nys-lsli-overview-20261020T153053682424Z.pdf"
+      },
+      "discovered_via": "c4a321119b505b0238db9ec1467c4fe3c13de54c0d04c0d30227e919c0ccf20c"
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:40:09.462104+00:00",
+      "http_status": 200,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+      "receipt": {
+        "source_id": "nys-pws-inventory-directory",
+        "requested_url": "https://www.health.ny.gov/environmental/water/drinking/service_line/",
+        "resolved_url": "https://www.health.ny.gov/environmental/water/drinking/service_line/",
+        "retrieved_at_utc": "2026-10-20T15:40:09.710449+00:00",
+        "sha256": "a5da9a1c4b0ed8d5e5abcffefd4f640690c27b4f15320fd6d92d5d4702bae40f",
+        "bytes": 479145,
+        "content_type": "text/html; charset=UTF-8",
+        "local_path": "data/raw/nys-pws-inventory-directory-20261020T154009710449Z.html"
+      }
+    },
+    {
+      "request_started_at_utc": "2026-10-20T15:40:32.156806+00:00",
+      "http_status": 200,
+      "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36",
+      "receipt": {
+        "source_id": "nys-pws-ny3503526-page",
+        "requested_url": "https://www.health.ny.gov/environmental/water/drinking/service_line/NY3503526.htm",
+        "resolved_url": "https://www.health.ny.gov/environmental/water/drinking/service_line/NY3503526.htm",
+        "retrieved_at_utc": "2026-10-20T15:40:32.297781+00:00",
+        "sha256": "29d614ace90e81f576c3e8f99194207c5f4a5c855a7b31eafc38c97de4a32bf3",
+        "bytes": 26095,
+        "content_type": "text/html; charset=UTF-8",
+        "local_path": "data/raw/nys-pws-ny3503526-page-20261020T154032297781Z.html"
+      }
+    }
+  ],
+  "review_mode": "inline AI source verification; human and independent review pending",
+  "verification": {
+    "reviewed_at_utc": "2026-10-20T15:45:38.137415+00:00",
+    "reviewer_id": "codex_inline_ai_2026-10-20",
+    "review_mode": "inline_ai_self_review",
+    "main_and_alternate_pdf_sha256_equal": true,
+    "saved_inventory_field_definitions_match_retrieved_metadata": true,
+    "inventory_rows_refetched": false,
+    "sources": {
+      "nys-guidance-main-retry": {
+        "issue": "August 2025; LCRR v3",
+        "physical_page_count": 15,
+        "text_read_pages_1based": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "visually_inspected_pages_1based": [
+          1,
+          5,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "status": "ai_text_and_visual_checked"
+      },
+      "nys-lsli-data-dictionary": {
+        "issue": "August 2024",
+        "physical_page_count": 4,
+        "text_read_pages_1based": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "visually_inspected_pages_1based": [
+          1,
+          2,
+          3
+        ],
+        "status": "ai_text_and_visual_checked"
+      },
+      "nys-lsli-overview": {
+        "issue": "August 2024",
+        "physical_page_count": 2,
+        "text_read_pages_1based": [
+          1,
+          2
+        ],
+        "visually_inspected_pages_1based": [
+          1,
+          2
+        ],
+        "status": "ai_text_and_visual_checked"
+      },
+      "nys-inventory-metadata-intake": {
+        "status": "ai_text_checked",
+        "scope": "Field definitions and attachment identifiers; not row freshness or PWS crosswalk"
+      },
+      "nys-guidance-index": {
+        "status": "ai_text_checked",
+        "scope": "Guidance PDF and template links; no workbook formulas reviewed"
+      },
+      "nys-pws-inventory-directory": {
+        "status": "ai_text_checked",
+        "scope": "Cornwall-named system identity entries only; not public-row membership, line counts or individual freshness"
+      },
+      "nys-pws-ny3503526-page": {
+        "status": "ai_text_checked",
+        "scope": "Sections I/III/V identity, aggregate two-cell table rows and certification date. Not a current baseline or locality-row membership crosswalk."
+      }
+    },
+    "human_verification": "pending; no person documented",
+    "independent_review": "pending",
+    "current_local_rule_applicability": "unconfirmed",
+    "reproduction": "Verify receipt SHA256; extract text with pypdf; render specified physical pages with pdftoppm at 120 dpi. Local text/renders remain in ignored work/official-guidance."
+  },
+  "validation_receipt": {
+    "verified_at_utc": "2026-10-20T15:45:38.137415+00:00",
+    "make_check": "passed: 24 tests plus structure/TOML and English checks",
+    "make_preflight": "passed on the unchanged pinned local snapshot",
+    "audit_statistics_and_all_eight_unconfirmed_gates_unchanged": true,
+    "compatibility_reports_identical": true,
+    "new_source_receipts_hashed": 8,
+    "archived_snapshot_receipts_hashed": 6,
+    "page_section_linked_findings": 22,
+    "independent_cases_still_pending": 12,
+    "four_public_templates_header_only": true,
+    "attempt_header_schema_fields_match": true,
+    "local_markdown_links_checked": 105,
+    "raw_row_level_files_tracked": false,
+    "review_mode": "inline_ai_self_review",
+    "remote_delivery": "not_attempted",
+    "department_or_human_validation": "not_received"
+  }
+}

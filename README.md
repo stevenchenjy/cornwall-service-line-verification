@@ -26,3 +26,5 @@ This public repository contains English documents, code, schemas, receipts and a
 ## Next-stage handoff
 
 The [unsent request](research/department-request.md), [intake and selection-bias plan](research/data-intake-plan.md), [independent review cases](research/independent-review-checklist.csv) and [second-review response](research/second-review-response.md) are ready. No actual department rules or decision records have been loaded; structural checks do not authenticate authority.
+
+October 20 evidence increment: the [official-source review](reports/official-guidance-review.md) records successful retrieval and AI text/visual inspection of NYSDOH guidance and the public dataset dictionary. It provides documentary support for the material/method mapping while local applicability remains unconfirmed. The [intake handoff](research/intake-handoff.md) adds empty baseline, restricted crosswalk and event-coverage templates, person-time/missingness rules and independent-review instructions. The public snapshot and all empirical modeling gates are unchanged.

@@ -1,6 +1,6 @@
 # Public inventory snapshot validation
 
-Generated at 2026-10-20T16:46:33.861624+00:00.
+Generated at 2026-10-20T17:23:59.943945+00:00.
 
 Query: `lower(locality) = 'cornwall-on-hudson'`. Raw rows: **1110**. Category Unknown: **808**.
 Counts describe public raw records, not current unique households or service lines.
@@ -61,5 +61,7 @@ The public snapshot is reproducible. The allocation population is not department
 The [state-transition specification](../research/workflow-specification.md) permits public-record review and resident assistance sequentially from both-unknown states. Reported-known labels remain eligible for evidence review. The frozen-baseline resident-only bound of 57 does not bound the contribution of resident assistance after public-side work.
 
 The deterministic transition checks use synthetic cases, documents and times; they are not Cornwall performance estimates. Final acceptance requires pinned decision/rule/source evidence, attributed validation and matching case/state. Missing or invalid acceptance evidence produces a deferred review with effort retained. Rejected/deferred reviews and separate correction history are represented. No independent human or departmental review of the specification has occurred.
+
+The [independent AI methods report](independent-methods-review-156ef21.md) records bounded source/contract checks and one correction-event intake finding. The [response](../research/methods-review-response-156ef21.md) documents schema v3 and its synthetic validator regressions. This artifact review does not confirm real policy, decisions or calibration.
 
 Next-stage handoff: [baseline/crosswalk, log-coverage and review instructions](../research/intake-handoff.md), [departmental request draft](../research/department-request.md), [data-intake and selection-bias plan](../research/data-intake-plan.md), and [independent review cases](../research/independent-review-checklist.csv).

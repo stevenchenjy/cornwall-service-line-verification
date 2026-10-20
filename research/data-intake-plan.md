@@ -16,6 +16,8 @@ Retain public-side historical lead status and its evidence separately from curre
 
 Before calibration, complete the coverage header for the full observation period, recording partial/absent capture, staff person-minutes versus elapsed time, shared-effort treatment and current workflow/selection references. Stock inventory records and newly accepted period cases have separate denominators. Missing effort remains in the intake; it cannot be forced through the workflow engine as zero.
 
+The correction-document requirements in item 4 apply to an accepted replacement decision. Schema v3 also retains rejected/deferred correction attempts when superseded-ID/reason metadata is genuinely unavailable, with available source/error values, unchanged category/evidence and nullable effort preserved. Do not invent metadata or omit failed work to satisfy an acceptance rule. See the [independent finding and response](methods-review-response-156ef21.md).
+
 ## Selection and comparison design
 
 Retain initial material/evidence state, prior failures/actions, action order, available property/access characteristics, selection reason, date and any existing coarse travel grouping. Ask how assignments were chosen. Distinguish differences in case difficulty from method performance. Compare within supported initial-state/history groups and report uncertainty and unobserved selection limits; do not call raw success differences causal effects.

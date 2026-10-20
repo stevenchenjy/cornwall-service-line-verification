@@ -1,6 +1,6 @@
 # Official New York guidance and field-semantics review
 
-Reviewed October 20, 2026 (America/New_York). Scope: primary-source verification for intake, not a regulatory determination or Cornwall acceptance policy. Review was performed inline by the AI session preparing this handoff. No independent reviewer or person has verified these sources for this project.
+Original inspection: October 20, 2026 (America/New_York). Scope: primary-source verification for intake, not a regulatory determination or Cornwall acceptance policy. The source inspection described below was performed inline by the AI session preparing the handoff. A later [independent AI methods review](independent-methods-review-156ef21.md) checked the pinned evidence and artifact contracts, with its narrower PDF/page coverage recorded separately. Human verification and departmental acceptance remain pending.
 
 ## Sources actually retrieved and read
 
@@ -58,6 +58,6 @@ Evidence IDs NY-S00-NY-S04 pin the directory, summary labels, source date and va
 
 ## Next evidence gate
 
-Use the [intake handoff](../research/intake-handoff.md) for dated identity, crosswalk, historical material and attempt coverage. The workflow engine checks documentary consistency under supplied rules; it does not implement the full NYSDOH classification rules. In particular, the existing side-material patterns do not themselves establish historical upstream conditions. Those conditions need authorized substantive review before an applicable rule/decision is validated. All eight empirical readiness gates remain unconfirmed, and the independent review checklist remains pending.
+Use the [intake handoff](../research/intake-handoff.md) for dated identity, crosswalk, historical material and attempt coverage. The workflow engine checks documentary consistency under supplied rules; it does not implement the full NYSDOH classification rules. In particular, the existing side-material patterns do not themselves establish historical upstream conditions. Those conditions need authorized substantive review before an applicable rule/decision is validated. All eight empirical readiness gates and the checklist's human/departmental case reviews remain unconfirmed. The scoped independent AI review found no blocking source-claim issue and identified one correction-event schema mismatch, addressed in the [response](../research/methods-review-response-156ef21.md).
 
 AI assistance was used for retrieval, text extraction, visual inspection and preparation of this report. Original PDFs and renders remain local and ignored; only receipts and authored findings are eligible for public review.

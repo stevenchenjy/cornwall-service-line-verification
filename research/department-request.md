@@ -20,6 +20,8 @@ We have reviewed the state's August 2024 data dictionary and August 2025 invento
 
 The state directory identifies Village of Cornwall-on-Hudson as NY3503526; the linked inventory summary displays certification date `10/15/24`. Please confirm whether this is the intended study system and how a current dated inventory relates to that summary and the separate public locality extract. We have not treated those sources as the same population or reporting date.
 
+Please retain unsuccessful correction attempts even when a superseded ID or correction reason was not recorded. Missing metadata can remain unavailable in the intake; accepted corrections still need the documented replacement decision, superseded ID and reason. We will not reconstruct missing entries or remove their effort to make an export pass validation.
+
 Thank you for considering this request.
 
 ## Handoff conditions

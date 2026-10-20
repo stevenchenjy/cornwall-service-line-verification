@@ -36,6 +36,8 @@ Missing, malformed, unvalidated, mismatched or insufficient evidence yields a **
 
 The [attempt schema](../data/schema/verification-attempt-log.schema.json) distinguishes evidence_review, classification_review and classification_correction. Optional curated fields link validated records, source outcomes and correction history; an existing department export can be mapped without pretending these fields were originally recorded.
 
+Schema v3 requires a nonempty superseded decision ID and reason only for an accepted correction. A rejected/deferred correction attempt can retain null or omitted metadata when it is genuinely unavailable; preserve available source values, validation error, unchanged category/evidence and staff effort. Missing correction support never becomes acceptance. The executable engine's acceptance/correction requirements are unchanged.
+
 ## Source-supported intake qualifications - October 20, 2026
 
 The [official-source review](../reports/official-guidance-review.md) supports separate resident submission/staff assessment and documents why historical upstream lead and segment extent may matter to category review. It does not load a local rule or verify a case. The current engine validates supplied side-material evidence patterns; it is not an implementation of all regulatory conditions and cannot itself establish upstream history. An authorized substantive rule/decision review must cover any required historical facts and current applicability before validation. If the real rule cannot be represented adequately, keep acceptance pending and document the representation gap before expanding the engine.

@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Anonymized verification attempt and review - draft intake contract v2",
+  "title": "Anonymized verification attempt and review - draft intake contract v3",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -275,14 +275,14 @@
         "string",
         "null"
       ],
-      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+      "description": "Retain the available superseded decision ID. Required and nonempty for accepted corrections; genuinely unavailable metadata may be null or omitted for rejected/deferred corrections. This value alone does not establish acceptance."
     },
     "correction_reason": {
       "type": [
         "string",
         "null"
       ],
-      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+      "description": "Retain the available correction reason. Required and nonempty for accepted corrections; genuinely unavailable metadata may be null or omitted for rejected/deferred corrections. Do not invent a reason to retain failed work."
     },
     "source_outcome": {
       "type": [
@@ -307,15 +307,22 @@
       ]
     }
   },
-  "description": "One attempted action including failures. Link repeated attempts with stable pseudonymous case IDs. No names, addresses, coordinates or free-text private notes. References are pseudonymous and underlying evidence remains restricted. Not yet a department-confirmed export specification. Resident submissions and evidence assessment can be separate actions. Classification accept/reject/defer always records effort; accepted decisions require a separately validated evidence bundle. Optional curated fields are populated by intake review rather than assumed to exist in original department exports.",
+  "description": "One attempted action including failures. Link repeated attempts with stable pseudonymous case IDs. No names, addresses, coordinates or free-text private notes. References are pseudonymous and underlying evidence remains restricted. Not yet a department-confirmed export specification. Resident submissions and evidence assessment can be separate actions. Classification accept/reject/defer always records effort; accepted decisions require a separately validated evidence bundle. Optional curated fields are populated by intake review rather than assumed to exist in original department exports. Accepted corrections require a superseded decision ID and reason; rejected/deferred correction attempts retain effort and available source/error values even when that metadata is genuinely unavailable.",
   "allOf": [
     {
       "if": {
         "properties": {
           "action": {
             "const": "classification_correction"
+          },
+          "outcome": {
+            "const": "classification_accepted"
           }
-        }
+        },
+        "required": [
+          "action",
+          "outcome"
+        ]
       },
       "then": {
         "required": [

@@ -10,7 +10,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - run: python -m unittest discover -s tests -v
-      - run: python scripts/validate_setup.py
-      - run: python scripts/check_language.py
-# Offline checks use synthetic fixtures; CI never downloads row-level inventory.
+      - run: python -m pip install uv
+      - run: uv sync --locked
+      - run: make check
+# Tests use synthetic fixtures. CI installs locked test dependencies, never inventory data.

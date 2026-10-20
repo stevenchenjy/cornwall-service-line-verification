@@ -12,3 +12,5 @@
 10. Review relevant work and local contractor/department analyses. A public map is optional and requires reviewed aggregation. No contact, fieldwork or outreach is part of this phase.
 
 Second-review amendment (2026-10-20): final-decision acceptance must use pinned and attributed source/rule records with matching state and sufficient category-specific evidence. Record rejected/deferred review effort, separate resident assessment, and preserve superseding correction history. Follow research/data-intake-plan.md; examine initial difficulty, action history and selection before comparing observed rates.
+
+Independent AI review increment (2026-10-20): [MR-156ef21](../reports/independent-methods-review-156ef21.md) records the separate reviewer and bounded primary-evidence coverage. Its [response](methods-review-response-156ef21.md) addresses failed-correction intake missingness with schema v3 and synthetic validation. This does not complete human/departmental validation or release any empirical modeling gate.

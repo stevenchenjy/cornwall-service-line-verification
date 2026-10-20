@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Anonymized verification attempt \u2014 draft request contract",
+  "title": "Anonymized verification attempt and review - draft intake contract v2",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -122,7 +122,9 @@
         "field_public",
         "field_customer",
         "joint_field_visit",
-        "classification_review"
+        "classification_review",
+        "evidence_review",
+        "classification_correction"
       ]
     },
     "outcome": {
@@ -253,7 +255,84 @@
       ],
       "minimum": 0,
       "description": "Observed staff minutes; null means unavailable, never zero-fill."
+    },
+    "decision_record_path": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "decision_record_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "supersedes_decision_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "correction_reason": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "source_outcome": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "validation_error": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Optional curated intake field; underlying record remains restricted. Never infer acceptance from this value alone."
+    },
+    "validation_status": {
+      "enum": [
+        "pending",
+        "validated",
+        "not_applicable",
+        null
+      ]
     }
   },
-  "description": "One attempted action including failures. Link repeated attempts with stable pseudonymous case IDs. No names, addresses, coordinates or free-text private notes. References are pseudonymous and underlying evidence remains restricted. Not yet a department-confirmed export specification."
+  "description": "One attempted action including failures. Link repeated attempts with stable pseudonymous case IDs. No names, addresses, coordinates or free-text private notes. References are pseudonymous and underlying evidence remains restricted. Not yet a department-confirmed export specification. Resident submissions and evidence assessment can be separate actions. Classification accept/reject/defer always records effort; accepted decisions require a separately validated evidence bundle. Optional curated fields are populated by intake review rather than assumed to exist in original department exports.",
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "classification_correction"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "supersedes_decision_id",
+          "correction_reason"
+        ],
+        "properties": {
+          "supersedes_decision_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "correction_reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
 }

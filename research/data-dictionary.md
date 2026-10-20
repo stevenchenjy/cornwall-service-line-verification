@@ -17,3 +17,5 @@ The provisional mapping uses current display labels and observed content and sti
 `rowsUpdatedAt` is a dataset-level timestamp, not an update date for Cornwall or any individual line. Do not infer a missing PWS ID from locality.
 
 Derived labels are `unknown`, `missing`, `reported_known` and `unmapped`. Preserve raw values. Reported-known means a material name exists in the record; it does not independently establish physical verification or regulatory acceptance.
+
+Conservative address/ZIP keys can miss spelling and abbreviation variants. Stable departmental line IDs and a restricted crosswalk are required for identity. The attempt contract now distinguishes submission, evidence review, classification accept/reject/defer and correction history; final acceptance requires a validated documentary bundle.

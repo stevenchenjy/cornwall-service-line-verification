@@ -10,3 +10,5 @@
 8. Obtain current practice, acceptance rules, binding resource budget and coverage priorities. Keep costs/rates null until calibrated or explicitly varied as hypothetical scenarios. Stock method counts cannot estimate success probabilities.
 9. Compare a small set of department-approved sequences against current practice under equal resources. Retain dependence and selection limitations, uncertainty, hard cases, retries and remaining gaps. Recommend no local optimum until the evidence gates pass.
 10. Review relevant work and local contractor/department analyses. A public map is optional and requires reviewed aggregation. No contact, fieldwork or outreach is part of this phase.
+
+Second-review amendment (2026-10-20): final-decision acceptance must use pinned and attributed source/rule records with matching state and sufficient category-specific evidence. Record rejected/deferred review effort, separate resident assessment, and preserve superseding correction history. Follow research/data-intake-plan.md; examine initial difficulty, action history and selection before comparing observed rates.

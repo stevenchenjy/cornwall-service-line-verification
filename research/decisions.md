@@ -11,3 +11,4 @@
 | 2026-10-19 | Make reviewed GitHub workspace content public at the user's explicit request | Supersedes the initial private-default decision; inspect all published history and keep raw/record-level data local-only |
 | 2026-10-19 | User authorized substantive research and adoption of external review | Supersedes setup-only scope; no department/resident contact authorized |
 | 2026-10-19 | Prioritize evidence gates and early review; pause workspace engineering | Water: comparability audit first. Service lines: baseline and sequential workflow before strategy ranking |
+| 2026-10-20 | Address second review and advance to departmental baseline/operations intake and independent workflow validation | Public code/report corrections complete; human review and real departmental evidence remain pending; no contact authorized |

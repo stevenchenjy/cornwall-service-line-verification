@@ -8,17 +8,96 @@
   "staff_time_budget_minutes": null,
   "coverage_priorities": null,
   "actions": [
-    {"name":"public_records","targets":["public"],"eligible":"unaccepted_public_evidence_including_both_unknown","minutes_per_attempt":null,"transition_probabilities":null},
-    {"name":"resident_assisted","targets":["customer"],"eligible":"unaccepted_customer_evidence_including_both_unknown","minutes_per_attempt":null,"transition_probabilities":null},
-    {"name":"field_public","targets":["public"],"eligible":"unaccepted_public_evidence","minutes_per_attempt":null,"transition_probabilities":null},
-    {"name":"field_customer","targets":["customer"],"eligible":"unaccepted_customer_evidence","minutes_per_attempt":null,"transition_probabilities":null},
-    {"name":"joint_field_visit","targets":["public","customer"],"eligible":"at_least_one_side_has_unaccepted_evidence","minutes_per_attempt":null,"joint_transition_probabilities":null}
+    {
+      "name": "public_records",
+      "targets": [
+        "public"
+      ],
+      "eligible": "unaccepted_public_evidence_including_both_unknown",
+      "minutes_per_attempt": null,
+      "transition_probabilities": null
+    },
+    {
+      "name": "resident_assisted",
+      "targets": [
+        "customer"
+      ],
+      "eligible": "unaccepted_customer_evidence_including_both_unknown",
+      "minutes_per_attempt": null,
+      "transition_probabilities": null
+    },
+    {
+      "name": "field_public",
+      "targets": [
+        "public"
+      ],
+      "eligible": "unaccepted_public_evidence",
+      "minutes_per_attempt": null,
+      "transition_probabilities": null
+    },
+    {
+      "name": "field_customer",
+      "targets": [
+        "customer"
+      ],
+      "eligible": "unaccepted_customer_evidence",
+      "minutes_per_attempt": null,
+      "transition_probabilities": null
+    },
+    {
+      "name": "joint_field_visit",
+      "targets": [
+        "public",
+        "customer"
+      ],
+      "eligible": "at_least_one_side_has_unaccepted_evidence",
+      "minutes_per_attempt": null,
+      "joint_transition_probabilities": null
+    },
+    {
+      "name": "evidence_review",
+      "targets": [
+        "public",
+        "customer"
+      ],
+      "eligible": "submitted_evidence",
+      "minutes_per_attempt": null,
+      "transition_probabilities": null
+    },
+    {
+      "name": "classification_review",
+      "targets": [
+        "final_category"
+      ],
+      "eligible": "case_without_accepted_category",
+      "minutes_per_attempt": null,
+      "accepted_rejected_deferred_probabilities": null
+    }
   ],
   "candidate_sequences": [
-    {"name":"current_department_workflow","steps":null},
-    {"name":"records_then_resident_then_targeted_field","steps":["public_records","resident_assisted","field_for_remaining_evidence"]},
-    {"name":"joint_field_for_eligible_cases","steps":["joint_field_visit"]}
+    {
+      "name": "current_department_workflow",
+      "steps": null
+    },
+    {
+      "name": "records_then_resident_then_targeted_field",
+      "steps": [
+        "public_records",
+        "resident_assisted",
+        "evidence_review",
+        "classification_review",
+        "field_for_remaining_evidence_if_deferred"
+      ]
+    },
+    {
+      "name": "joint_field_for_eligible_cases",
+      "steps": [
+        "joint_field_visit"
+      ]
+    }
   ],
-  "retry_and_escalation_policy":null,
-  "note":"Design contract only. Null parameters prevent invented local rates, costs, retry rules or strategy rankings. Candidate sequences require department review."
+  "retry_and_escalation_policy": null,
+  "note": "Design contract only. Null parameters prevent invented local rates, costs, retry rules or strategy rankings. Candidate sequences require department review. Final decisions require pinned records and attributed validation; corrections have a separate auditable path. No actual department rules have been loaded.",
+  "decision_evidence_root": null,
+  "decision_validation_status": "no_department_records_received"
 }

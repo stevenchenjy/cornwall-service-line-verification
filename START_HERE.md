@@ -1,12 +1,9 @@
 # Start here
 
-1. Read [AGENTS.md](AGENTS.md), [brief](research/brief.md) and [status](research/STATUS.md).
-2. Inspect the [baseline audit](reports/baseline-validation.md), [transition contract](research/workflow-specification.md) and [early self-review](reports/methods-review.md).
-3. Run `uv sync --locked` and `make check`. `make preflight` requires the ignored pinned raw snapshot; use `make fetch` if absent.
-4. Resolve the documented baseline/acceptance/calibration gates before estimating strategy rankings.
+Read [AGENTS.md](AGENTS.md), [status](research/STATUS.md), the [baseline audit](reports/baseline-validation.md), [revised workflow contract](research/workflow-specification.md) and [second-review response](research/second-review-response.md). Run `make check`; `make preflight` requires the ignored pinned raw snapshot.
+
+The next stage is **departmental data intake and independent workflow validation**. Use the [request draft](research/department-request.md), [intake/selection-bias plan](research/data-intake-plan.md) and [review checklist](research/independent-review-checklist.csv). No correspondence has been sent.
 
 ## Next research prompt
 
-> Review the first public-snapshot audit and sequential workflow contract before allocation modeling. Keep raw locality rows distinct from a dated system-specific unique-line baseline. Check repeated groups, field mapping, material labels versus accepted evidence, category-specific acceptance, sequential records/resident actions, failures/retries and full staff effort. Review the focused request and attempt schema. Keep costs and rates null until locally calibrated or explicitly hypothetical. Record what was actually inspected and whether review is independent. Do not send requests or contact residents without authorization. Use English throughout.
-
-Maps are optional. Do not extend agent/runtime setup; existing roles may be used inline. Spawn child agents only with explicit delegation authorization.
+> Validate incoming dated stable-ID inventory, authoritative rules, current workflow and linked attempts before strategy comparison. Keep source exports and validation evidence restricted and pinned. Final categories require validated case-matching decision/rule/source records; missing or insufficient support stays pending. Preserve resident submission versus assessment, rejected/deferred review effort and correction history. Examine action-selection differences before interpreting success rates. Use the actual current workflow as comparator. Keep costs/probabilities null until support exists and maps optional. Use English; no third-party contact without authorization.

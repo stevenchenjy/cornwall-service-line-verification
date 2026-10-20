@@ -16,3 +16,7 @@ Reviewer: the same AI session that produced the audit and transition contract. T
 The code's earlier simple expected-completion helper is retained as a legacy single-action calculation, not used to rank sequential strategies. It requires an explicit probability and cannot supply local calibration. No optimizer has been implemented. The map is optional and does not block review.
 
 Independent review should first challenge identity/mapping and the transition/outcome contract. A department-confirmed baseline and attempt log remain prerequisites for a local recommendation.
+
+## Second-review correction - October 20, 2026
+
+The external ChatGPT review found unsupported default-case acceptance, accepted-category overwrite and missing rejected/deferred review events. This session reproduced all three, replaced the boolean/reference interface with pinned validated documentary records, added case/state/category-evidence checks, separated submission/assessment, retained rejected/deferred effort and added an auditable correction path. Synthetic document tests cover valid and invalid countercases. This is not independent human review or authentication of any actual authority; actual rules and department records remain absent.

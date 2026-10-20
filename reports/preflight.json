@@ -30,10 +30,10 @@
     "customer_sl_material": {}
   },
   "nonunknown_category_rows_with_unknown_or_missing_material": 1,
-  "generated_at_utc": "2026-10-20T02:09:08.185452+00:00",
+  "generated_at_utc": "2026-10-20T15:06:15.463223+00:00",
   "snapshot_sha256": "4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a",
   "where": "lower(locality) = 'cornwall-on-hudson'",
-  "stage": "public_snapshot_validation",
+  "stage": "department_data_intake_preparation",
   "limitation": "Counts describe public raw records, not current unique households or service lines.",
   "repeated_record_diagnostics": {
     "repeated_groups": 43,

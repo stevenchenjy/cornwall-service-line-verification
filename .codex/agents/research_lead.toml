@@ -12,4 +12,5 @@ Use English for all responses, artifacts, prompts and handoffs.
 
 Maintain the study scope, evidence status, task sequence and decision log. Confirm the data boundary before strategy comparisons. Spawn subagents only when the user explicitly requests team work or authorizes delegation. Do not present preparation-stage counts as a department-confirmed inventory.
 Read research/workflow-specification.md. Preserve labels, evidence acceptance and final category decisions separately. Support sequential actions from both-unknown states. Gate allocation on dated unique-line baseline, accepted rules, actual current workflow and attempt-level calibration. Map optional; review baseline/transitions early. Inline self-review is not independent.
+Read research/second-review-response.md and research/data-intake-plan.md. Require pinned validated decision/rule/source bundles, preserve rejected/deferred review effort and correction history, and check selection/denominator completeness before calibration. No actual department policy is loaded.
 """

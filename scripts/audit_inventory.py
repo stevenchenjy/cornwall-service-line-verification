@@ -17,7 +17,7 @@ def main():
         raise SystemExit('Snapshot hash mismatch; stop and inspect local data.')
     rows = json.loads(data)
     result = audit(rows)
-    result.update(generated_at_utc=utc_now(), snapshot_sha256=receipt['combined_sha256'], where=receipt['where'], stage='public_snapshot_validation',
+    result.update(generated_at_utc=utc_now(), snapshot_sha256=receipt['combined_sha256'], where=receipt['where'], stage='department_data_intake_preparation',
                   limitation='Counts describe public raw records, not current unique households or service lines.')
     result['repeated_record_diagnostics'] = repeated_record_diagnostics(rows)
     result['recorded_method_counts'] = {
@@ -57,7 +57,7 @@ def main():
     d=result['repeated_record_diagnostics']
     lines += ['', '## Repeated records: additional checks', '',
               f"Of {d['repeated_groups']} repeated key groups, {d['identical_payload_groups']} contain identical full payloads and {d['identical_material_method_category_groups']} contain identical material/method/category combinations. {d['differing_category_groups']} groups contain different overall category labels.",
-              'These differences do not establish historical revisions or separate lines. A stable identifier and departmental matching policy are needed; all rows remain intact.', '',
+              'These differences do not establish historical revisions or separate lines. Conservative keys can also miss the same address spelled or abbreviated differently. A stable line identifier and departmental crosswalk are needed; all rows remain intact.', '',
               '## Recorded methods: evidence of filing, not success probabilities', '',
               '| Side / recorded method | Raw records |','|---|---:|']
     for field,label in [('public_sl_material','Public'),('customer_sl_material_1','Customer')]:
@@ -67,7 +67,7 @@ def main():
               '## Research readiness', '',
               'The public snapshot is reproducible. The allocation population is not department-confirmed. All eight readiness gates in the JSON report remain unconfirmed. Modeling is paused pending the [baseline and attempt-log request](../research/questions-for-water-department.md).', '',
               'The [state-transition specification](../research/workflow-specification.md) permits public-record review and resident assistance sequentially from both-unknown states. Reported-known labels remain eligible for evidence review. The frozen-baseline resident-only bound of 57 does not bound the contribution of resident assistance after public-side work.', '',
-              'The deterministic transition checks use synthetic cases and times solely to test the contract; they are not Cornwall performance estimates. No independent human or departmental review of the specification has occurred.']
+              'The deterministic transition checks use synthetic cases, documents and times; they are not Cornwall performance estimates. Final acceptance requires pinned decision/rule/source evidence, attributed validation and matching case/state. Missing or invalid acceptance evidence produces a deferred review with effort retained. Rejected/deferred reviews and separate correction history are represented. No independent human or departmental review of the specification has occurred.', '', 'Next-stage handoff: [departmental request draft](../research/department-request.md), [data-intake and selection-bias plan](../research/data-intake-plan.md), and [independent review cases](../research/independent-review-checklist.csv).' ]
     (ROOT / 'reports/preflight.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
     (ROOT / 'reports/baseline-validation.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
     (ROOT / 'reports/baseline-validation.json').write_text(json.dumps(result,indent=2)+'\n', encoding='utf-8')

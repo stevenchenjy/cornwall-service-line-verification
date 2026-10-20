@@ -15,3 +15,5 @@
 **Outputs:** Aggregate baseline audit, transition specification, focused request, then a same-resource comparison and sensitivity analysis if inputs arrive. Maps are optional when geography changes travel or coverage decisions; they do not block methods review.
 
 No health-risk prediction, Unknown-as-lead interpretation, automatic household deduplication, resident contact or fieldwork is authorized. Departmental use and originality remain unestablished.
+
+**Next-stage handoff (October 20, 2026):** Departmental baseline/operations intake and independent workflow validation are prepared. Accepted decisions require pinned validated documentary evidence; rejected/deferred reviews retain effort and corrections preserve history. See [second-review response](second-review-response.md) and [intake plan](data-intake-plan.md).

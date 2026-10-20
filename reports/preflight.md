@@ -1,6 +1,6 @@
 # Public inventory snapshot validation
 
-Generated at 2026-10-20T02:09:08.185452+00:00.
+Generated at 2026-10-20T15:06:15.463223+00:00.
 
 Query: `lower(locality) = 'cornwall-on-hudson'`. Raw rows: **1110**. Category Unknown: **808**.
 Counts describe public raw records, not current unique households or service lines.
@@ -37,7 +37,7 @@ Some metadata public-side descriptions appear misaligned with display names. The
 ## Repeated records: additional checks
 
 Of 43 repeated key groups, 0 contain identical full payloads and 0 contain identical material/method/category combinations. 12 groups contain different overall category labels.
-These differences do not establish historical revisions or separate lines. A stable identifier and departmental matching policy are needed; all rows remain intact.
+These differences do not establish historical revisions or separate lines. Conservative keys can also miss the same address spelled or abbreviated differently. A stable line identifier and departmental crosswalk are needed; all rows remain intact.
 
 ## Recorded methods: evidence of filing, not success probabilities
 
@@ -60,4 +60,6 @@ The public snapshot is reproducible. The allocation population is not department
 
 The [state-transition specification](../research/workflow-specification.md) permits public-record review and resident assistance sequentially from both-unknown states. Reported-known labels remain eligible for evidence review. The frozen-baseline resident-only bound of 57 does not bound the contribution of resident assistance after public-side work.
 
-The deterministic transition checks use synthetic cases and times solely to test the contract; they are not Cornwall performance estimates. No independent human or departmental review of the specification has occurred.
+The deterministic transition checks use synthetic cases, documents and times; they are not Cornwall performance estimates. Final acceptance requires pinned decision/rule/source evidence, attributed validation and matching case/state. Missing or invalid acceptance evidence produces a deferred review with effort retained. Rejected/deferred reviews and separate correction history are represented. No independent human or departmental review of the specification has occurred.
+
+Next-stage handoff: [departmental request draft](../research/department-request.md), [data-intake and selection-bias plan](../research/data-intake-plan.md), and [independent review cases](../research/independent-review-checklist.csv).

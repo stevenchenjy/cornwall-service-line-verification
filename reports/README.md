@@ -5,3 +5,5 @@
 - `preflight.md/json`: compatibility copies of the current aggregate validation.
 
 No strategy ranking, current unique-line population or accepted classification result is established. The [workflow specification](../research/workflow-specification.md) is a draft design contract with synthetic tests.
+
+Second-review revision: final decisions require pinned validated documentary bundles, rejected/deferred classification review retains effort, and corrections preserve superseded history. See [second-review response](../research/second-review-response.md) and [independent review cases](../research/independent-review-checklist.csv).

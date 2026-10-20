@@ -1,38 +1,41 @@
-# Sequential verification workflow — draft contract
+# Sequential verification and decision-review contract - revised after second review
 
-This is a reviewable design specification, not an implemented Cornwall operating policy or calibrated allocation model. Departmental acceptance rules, permitted action sequences and retry limits require confirmation. The executable [transition contract](../src/verification_workflow.py) uses no probabilities or optimizer.
+This is a narrow executable design contract, not Cornwall operating policy or a calibrated allocation model. Actual departmental rules, baseline and workflow are still missing. See [data-intake-plan.md](data-intake-plan.md) for the trust boundary and [independent-review-checklist.csv](independent-review-checklist.csv) for review cases.
 
-## State and outcome
+## Separate state and outcome
 
-For each stable pseudonymous line/case ID, retain the as-of date and source-row mapping locally. Preserve each side's reported material, evidence status (`unreviewed`, `submitted`, `accepted`, `rejected`) and evidence reference. Preserve the reported overall category separately from the final accepted category, acceptance-rule reference, decision reference and decision date.
+A case retains stable pseudonymous case/system IDs, baseline date, both reported materials and submitted/accepted/rejected evidence references. A fully evidenced pair remains a process milestone. It never automatically creates an accepted category. Category-specific rules can require evidence on one or both sides; the code does not invent regulatory rules.
 
-A populated method or material label does not imply accepted evidence. `fully_evidenced_pair` is a process milestone; it does not automatically produce an accepted overall category. The final outcome is a documented department-accepted category under a confirmed rule. The contract records such a decision; it does not adjudicate regulatory sufficiency. A confirmed rule may accept a category with one side still unknown, so both known materials are not imposed as a universal completion condition.
+## Submission, assessment and classification actions
 
-## Actions and changing eligibility
+| Action | Eligibility | Outcome and effort |
+|---|---|---|
+| Public records or targeted/joint field work | Relevant side evidence unaccepted | Returned evidence, no response, inconclusive, access failure or cancellation; retain effort and state |
+| Resident assistance | Customer evidence unaccepted, including both-unknown states | A returned resident submission remains submitted; it cannot directly create accepted evidence |
+| Evidence review | Submitted evidence exists | Departmental assessment accepts/rejects the submitted side evidence; record its separate effort |
+| Classification review | No accepted final category yet | Explicit acceptance, rejection or deferral; every outcome retains effort/history |
+| Classification correction | A final category already exists | Separate validated superseding decision and reason; retain old/new category and side-evidence history |
 
-| Action | Evidence target | Eligibility before a final accepted decision | Typical next state, conditional on reviewed result |
-|---|---|---|---|
-| Public records | Public side | Public evidence unaccepted, including both-unknown or a named but unreviewed material | Public evidence submitted/accepted/rejected; customer state retained |
-| Resident assistance | Customer side | Customer evidence unaccepted, including both-unknown | Customer evidence submitted/accepted/rejected; public state retained |
-| Public/customer field check | Specified side | That side's evidence unaccepted | Reviewed evidence for the target; no automatic result for other side |
-| Joint field visit | Either/both sides | At least one side has unaccepted evidence | Separate side outcomes; use observed joint transitions, not an assumed product |
-| Classification review | Final category | Documented evidence ready under the confirmed category-specific rule | Accept, reject or defer with a recorded rule and decision |
+Records review then resident assistance (or reverse) remains possible from both-unknown states. A review may reject/defer while materials remain unknown. The frozen 57-row resident-only bound does not bound resident participation after other actions. Failed attempts and review work do not count as accepted completions.
 
-A both-unknown case can follow `public_records → resident_assisted → classification_review`, or the reverse order, or field escalation. After public records succeed, resident assistance remains eligible. The snapshot's 57 customer-only-unknown raw rows are a frozen-baseline resident-only material-gap bound; they do not bound resident participation after other actions. The 575 both-unknown records are potential sequence inputs, not predicted completions.
+## Validated final-decision records
 
-No response, inaccessible site, inconclusive evidence and cancellation consume recorded effort and leave evidence unresolved. A returned submission can be rejected or await review. Link retries to earlier attempts; do not count each attempt as a new line or delete failed attempts. Retry caps, waits and escalation criteria remain unset until current practice and constraints are documented. Accepted evidence cannot be silently overwritten; reopening requires a reviewed correction path.
+The old `rules_confirmed=True` / arbitrary reference interface has been removed. `classification_review()` and `record_department_decision()` require a pinned local decision bundle before acceptance:
 
-## Calibration and comparison gates
+- The structured decision record and referenced source document exist and match their SHA256.
+- Attributed validation entries identify a reviewer and review date for the decision and rule source; their real authority must be checked during intake.
+- Case ID, system ID, baseline date and evidence-state fingerprint match, preventing cross-case and stale-state reuse.
+- The reviewed rule category/system and category-specific material/evidence alternatives match the current case; required side evidence files exist and match hashes.
+- An accepted initial decision cannot overwrite an existing accepted category.
 
-1. Department-confirmed boundary, dated baseline and stable unique-line IDs, with a documented public-row crosswalk and repeated-record treatment.
-2. Confirmed evidence/acceptance rules, including conflicting evidence, category-specific sufficiency and update acceptance.
-3. Actual current workflow by initial state, including nonresponse, failed access, rejected evidence and follow-up. This is the comparator; do not invent it.
-4. Linked attempt logs covering preparation, travel, field/contact work, administration/review and repeat effort. Method distributions in a stock inventory are not attempt success rates.
-5. A common staff-time constraint, any monetary constraint and department-defined coverage priorities. Track persistent hard cases, geographic/access differences and selection of easy cases.
-6. Independent review of this contract and baseline before strategy results. A map is optional.
+Missing, malformed, unvalidated, mismatched or insufficient evidence yields a **deferred classification review**, with effort and validation error preserved. A reference string or method label alone cannot produce success. The validators check structural integrity and consistency; they cannot authenticate a forged source or replace substantive department/state review. All actual rule/decision inputs remain absent.
 
-Candidate sequences and null parameters are in [scenarios.example.json](../config/scenarios.example.json). Estimate transition probabilities by initial state/action/history with uncertainty only after a defensible attempt denominator exists. Preserve dependence of side outcomes for joint visits. If plausible ranges reverse rankings, identify the next useful measurement instead of choosing a winner.
+## Corrections and history
 
-## Current verification
+`correct_department_decision()` is a separate path. It requires a new decision ID, the superseded decision ID, a correction reason, matching replacement evidence state and the same pinned/validated source checks. Invalid corrections retain the existing category/evidence and record a deferred correction with effort. Valid corrections retain both decisions and before/after side states, so the case remains one classified line rather than two completions.
 
-Synthetic tests demonstrate sequential eligibility, rejected/submitted evidence, nonresponse/retry effort and explicit final acceptance. Synthetic times and rules are test fixtures, not empirical observations. No local success rate, best policy, field protocol or independent review is claimed.
+The [attempt schema](../data/schema/verification-attempt-log.schema.json) distinguishes evidence_review, classification_review and classification_correction. Optional curated fields link validated records, source outcomes and correction history; an existing department export can be mapped without pretending these fields were originally recorded.
+
+## Modeling gate
+
+A dated stable-ID population, confirmed semantics/acceptance rules, actual current workflow, attempt-level effort/outcomes including failures/reviews/retries, and agreed resource/coverage priorities are all required. Preserve case difficulty, action history and selection reasons before comparing observed rates. Synthetic document/time fixtures demonstrate contract behavior, not Cornwall effectiveness. Maps are optional and no optimizer is being built.

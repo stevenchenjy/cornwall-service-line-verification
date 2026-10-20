@@ -5,3 +5,4 @@ L-C03,43 repeated address-plus-ZIP keys,nys-lsli-data,snapshot_reproduced,Key de
 L-C04,Local process offers self-inspection and department visits,local-verification,source_text_checked,No contact or fieldwork performed,,
 L-C05,2026 statewide audit preprint exists,sohail-2026-preprint,fulltext_design_review,Preprint; selected code inspected; full numerical results not reproduced,research/literature-note.md,
 L-C06,43 repeated groups have differing material/method/category tuples;12 have different categories,nys-lsli-data,snapshot_reproduced,No inference about historical revisions or unique lines,reports/baseline-validation.json,4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a
+L-C07,Decision/review corrections tested with synthetic local documents and effort,,synthetic_contract_validation,No real department policy or performance evidence,tests/test_workflow.py,

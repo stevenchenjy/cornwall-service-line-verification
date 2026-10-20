@@ -43,3 +43,7 @@ Unknown means insufficient material information, not confirmed lead, health risk
 ## Revised research gates
 
 Pause additional workspace/runtime engineering. Review the first source table or workflow specification before a final narrative, optimizer or optional map. Use `ai_text_and_visual_checked` for AI PDF inspection; `human_verified` requires a documented person. Record whether review was inline self-review or independent. Follow the current stopping/modeling gates in research/analysis-plan.md.
+
+## Second-review requirements
+
+Read research/second-review-response.md and research/data-intake-plan.md. Final acceptance requires a validated pinned case-matching decision/rule/source bundle with sufficient category-specific evidence. Preserve rejected/deferred review effort, separate resident assessment, and use the explicit correction path with superseded history. No actual department policy or data has been loaded.

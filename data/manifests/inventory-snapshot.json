@@ -1,0 +1,75 @@
+{
+  "dataset": "j63k-4n92",
+  "generated_at_utc": "2026-10-20T01:12:38.545211+00:00",
+  "where": "lower(locality) = 'cornwall-on-hudson'",
+  "order": ":id",
+  "raw_rows": 1110,
+  "count_before": 1110,
+  "count_after": 1110,
+  "dataset_rows_updated_at": 1791297254,
+  "combined_path": "data/interim/inventory-locality-4574039b03f11efc.json",
+  "combined_sha256": "4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a",
+  "metadata_before": {
+    "source_id": "inventory-metadata-before",
+    "requested_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+    "resolved_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+    "retrieved_at_utc": "2026-10-20T01:12:32.771173+00:00",
+    "sha256": "2f4fa4b33afe2a8625bc75dad05939db2de1d40c5ee574b668f7001ab32aa19c",
+    "bytes": 48096,
+    "content_type": "application/json; charset=utf-8",
+    "local_path": "data/raw/inventory-metadata-before-20261020T011232771173Z.json"
+  },
+  "metadata_after": {
+    "source_id": "inventory-metadata-after",
+    "requested_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+    "resolved_url": "https://health.data.ny.gov/api/views/j63k-4n92.json",
+    "retrieved_at_utc": "2026-10-20T01:12:38.541203+00:00",
+    "sha256": "2f4fa4b33afe2a8625bc75dad05939db2de1d40c5ee574b668f7001ab32aa19c",
+    "bytes": 48096,
+    "content_type": "application/json; charset=utf-8",
+    "local_path": "data/raw/inventory-metadata-after-20261020T011238541203Z.json"
+  },
+  "count_before_receipt": {
+    "source_id": "inventory-count",
+    "requested_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24select=count%28%2A%29+as+n&%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27",
+    "resolved_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24select=count%28%2A%29+as+n&%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27",
+    "retrieved_at_utc": "2026-10-20T01:12:33.788640+00:00",
+    "sha256": "fc5ccfd8fd03ed47716094349d8250422ab939647970c9f2e99b8ea2b6c56918",
+    "bytes": 15,
+    "content_type": "application/json;charset=utf-8",
+    "local_path": "data/raw/inventory-count-20261020T011233788640Z.json"
+  },
+  "count_after_receipt": {
+    "source_id": "inventory-count",
+    "requested_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24select=count%28%2A%29+as+n&%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27",
+    "resolved_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24select=count%28%2A%29+as+n&%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27",
+    "retrieved_at_utc": "2026-10-20T01:12:38.310017+00:00",
+    "sha256": "fc5ccfd8fd03ed47716094349d8250422ab939647970c9f2e99b8ea2b6c56918",
+    "bytes": 15,
+    "content_type": "application/json;charset=utf-8",
+    "local_path": "data/raw/inventory-count-20261020T011238310017Z.json"
+  },
+  "page_receipts": [
+    {
+      "source_id": "inventory-page-0",
+      "requested_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27&%24order=%3Aid&%24limit=1000&%24offset=0",
+      "resolved_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27&%24order=%3Aid&%24limit=1000&%24offset=0",
+      "retrieved_at_utc": "2026-10-20T01:12:35.897305+00:00",
+      "sha256": "956b86c919a275d14690731ab4f1ce62c98a8c9f5114f7e584dbbbcdc85403e1",
+      "bytes": 595469,
+      "content_type": "application/json;charset=utf-8",
+      "local_path": "data/raw/inventory-page-0-20261020T011235897305Z.json"
+    },
+    {
+      "source_id": "inventory-page-1000",
+      "requested_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27&%24order=%3Aid&%24limit=1000&%24offset=1000",
+      "resolved_url": "https://health.data.ny.gov/resource/j63k-4n92.json?%24where=lower%28locality%29+%3D+%27cornwall-on-hudson%27&%24order=%3Aid&%24limit=1000&%24offset=1000",
+      "retrieved_at_utc": "2026-10-20T01:12:37.329855+00:00",
+      "sha256": "9c73018d8e4f7f57e17d69aee63183b8fa60d9ab5880fe99f6fa8542a83d6f91",
+      "bytes": 66511,
+      "content_type": "application/json;charset=utf-8",
+      "local_path": "data/raw/inventory-page-1000-20261020T011237329855Z.json"
+    }
+  ],
+  "warning": "Locality does not establish PWS membership; dataset timestamp is not row freshness."
+}

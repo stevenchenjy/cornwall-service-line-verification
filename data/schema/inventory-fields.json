@@ -1,0 +1,152 @@
+[
+  {
+    "name": "Service Line Locality",
+    "fieldName": "locality",
+    "dataTypeName": "text",
+    "description": "Name of the city, town, village, or hamlet where the service line is located."
+  },
+  {
+    "name": "Street Address",
+    "fieldName": "street_address",
+    "dataTypeName": "text",
+    "description": "Street number and name where the service line is located."
+  },
+  {
+    "name": "Zip Code",
+    "fieldName": "zip_code",
+    "dataTypeName": "text",
+    "description": "The five-digit code where the service line is located."
+  },
+  {
+    "name": "State",
+    "fieldName": "state",
+    "dataTypeName": "text",
+    "description": "State"
+  },
+  {
+    "name": "Lead Gooseneck, Pigtail or Connector Currently Present",
+    "fieldName": "lead_gooseneck_pigtail_or",
+    "dataTypeName": "text",
+    "description": "The presence of a short section of piping that can be bent and used for connections between the water main and the service line."
+  },
+  {
+    "name": "Current Public Side SL Material",
+    "fieldName": "current_public_side_sl",
+    "dataTypeName": "text",
+    "description": "For public side service line (SL) material that is not currently lead (e.g., copper or plastic), indicates if it was ever lead in the past."
+  },
+  {
+    "name": "Was Public SL Material Ever Previously Lead",
+    "fieldName": "was_public_sl_material_ever",
+    "dataTypeName": "text",
+    "description": "The method water system used to identify the public side service line (SL) material. "
+  },
+  {
+    "name": "Public SL Material Verification Method",
+    "fieldName": "public_sl_material",
+    "dataTypeName": "text",
+    "description": "The month, day, and/or year the public side service line (SL) was installed or replaced with the current line."
+  },
+  {
+    "name": "Public SL Installation or Replacement Date",
+    "fieldName": "public_sl_installation_or",
+    "dataTypeName": "text",
+    "description": "The diameter of the public side service line (SL) in inches."
+  },
+  {
+    "name": "Public SL Size",
+    "fieldName": "public_sl_size",
+    "dataTypeName": "text",
+    "description": "The diameter of the public side service line (SL) in inches."
+  },
+  {
+    "name": "Customer SL Material",
+    "fieldName": "customer_sl_material",
+    "dataTypeName": "text",
+    "description": "The material of the service line (SL) owned by a customer."
+  },
+  {
+    "name": "Customer SL Material Verification Method",
+    "fieldName": "customer_sl_material_1",
+    "dataTypeName": "text",
+    "description": "The method water system used to identify the material of the customer-owned portion of the service line (SL), typically piping from a curb stop to the building/house."
+  },
+  {
+    "name": "Lead Solder Present",
+    "fieldName": "lead_solder_present",
+    "dataTypeName": "text",
+    "description": "Whether or not lead solder is present on copper piping."
+  },
+  {
+    "name": "Building Type",
+    "fieldName": "building_type",
+    "dataTypeName": "text",
+    "description": "The classification of the house/building connected to the water main through the service line."
+  },
+  {
+    "name": "POU or POE Treatment Present",
+    "fieldName": "pou_or_poe_treatment_present",
+    "dataTypeName": "text",
+    "description": "Whether or not there is a water treatment system inside the house/building."
+  },
+  {
+    "name": "Customer SL Installation or Replacement Date",
+    "fieldName": "customer_sl_installation",
+    "dataTypeName": "text",
+    "description": "The month, day, and/or year the customer side service line (SL) was installed or replaced."
+  },
+  {
+    "name": "Customer SL Size",
+    "fieldName": "customer_sl_size",
+    "dataTypeName": "text",
+    "description": "The diameter of the customer side service line (SL) in inches."
+  },
+  {
+    "name": "SL Category",
+    "fieldName": "sl_category",
+    "dataTypeName": "text",
+    "description": "Type of service line according to drinking water regulations. "
+  },
+  {
+    "name": "Note",
+    "fieldName": "note",
+    "dataTypeName": "text",
+    "description": "A dedicated section in the inventory to list any information that cannot be listed in any of the inventory fields."
+  },
+  {
+    "name": "Location",
+    "fieldName": "location",
+    "dataTypeName": "point",
+    "description": "Georeference field."
+  },
+  {
+    "name": "Counties",
+    "fieldName": ":@computed_region_9yqb_tdyd",
+    "dataTypeName": "number",
+    "description": "This column was automatically created in order to record in what polygon from the dataset 'Counties' (9yqb-tdyd) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+  },
+  {
+    "name": "ComputedFieldforMapping1",
+    "fieldName": ":@computed_region_assa_msit",
+    "dataTypeName": "number",
+    "description": "This column was automatically created in order to record in what polygon from the dataset 'ComputedFieldforMapping1' (assa-msit) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+  },
+  {
+    "name": "School Districts 2016.shp",
+    "fieldName": ":@computed_region_5edz_4hdv",
+    "dataTypeName": "number",
+    "description": "This column was automatically created in order to record in what polygon from the dataset 'School Districts 2016.shp' (5edz-4hdv) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+  },
+  {
+    "name": "NYS Tick Regions",
+    "fieldName": ":@computed_region_v9ry_wcha",
+    "dataTypeName": "number",
+    "description": "This column was automatically created in order to record in what polygon from the dataset 'NYS Tick Regions' (v9ry-wcha) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+  },
+  {
+    "name": "New York Zip Codes",
+    "fieldName": ":@computed_region_43an_4dx5",
+    "dataTypeName": "number",
+    "description": "This column was automatically created in order to record in what polygon from the dataset 'New York Zip Codes' (43an-4dx5) the point in column 'location' is located.  This enables the creation of region maps (choropleths) in the visualization canvas and data lens."
+  }
+]

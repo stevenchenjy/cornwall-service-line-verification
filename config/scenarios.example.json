@@ -1,0 +1,11 @@
+{
+  "status": "template_requires_calibration",
+  "unit": "minutes_per_attempt",
+  "outcome": "accepted_complete_line_classification",
+  "actions": [
+    {"name": "resident_assisted", "eligible_gap": "customer_unknown", "minutes_per_attempt": null, "contact_probability": null, "accepted_given_contact_probability": null},
+    {"name": "public_records", "eligible_gap": "public_unknown", "minutes_per_attempt": null, "accepted_probability": null},
+    {"name": "joint_field_visit", "eligible_gap": "both_unknown", "minutes_per_attempt": null, "joint_accepted_probability": null}
+  ],
+  "note": "Nulls intentionally prevent invented local costs or success rates. Joint completion is not assumed independent."
+}

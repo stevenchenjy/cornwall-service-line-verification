@@ -1,0 +1,38 @@
+{
+  "raw_rows": 1110,
+  "raw_categories": {
+    "Unknown": 808,
+    "Non-Lead": 301,
+    "GSLRR": 1
+  },
+  "unknown_category_rows": 808,
+  "unknown_gap_buckets": {
+    "both_unknown": 575,
+    "public_unknown": 176,
+    "customer_unknown": 57
+  },
+  "unknown_rows_needing_public_material": 751,
+  "resident_only_completion_raw_row_upper_bound": 57,
+  "exact_address_zip_duplicates": {
+    "repeated_key_groups": 43,
+    "rows_in_repeated_groups": 86,
+    "excess_rows": 43,
+    "missing_key_rows": 0
+  },
+  "conservative_normalized_duplicates": {
+    "repeated_key_groups": 43,
+    "rows_in_repeated_groups": 86,
+    "excess_rows": 43,
+    "missing_key_rows": 0
+  },
+  "unmapped_material_labels": {
+    "current_public_side_sl": {},
+    "customer_sl_material": {}
+  },
+  "nonunknown_category_rows_with_unknown_or_missing_material": 1,
+  "generated_at_utc": "2026-10-20T01:13:42.057554+00:00",
+  "snapshot_sha256": "4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a",
+  "where": "lower(locality) = 'cornwall-on-hudson'",
+  "stage": "bootstrap_diagnostic",
+  "limitation": "Counts describe public raw records, not current unique households or service lines."
+}

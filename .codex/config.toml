@@ -1,0 +1,4 @@
+# Project-local; model, provider, permissions and MCP servers inherit from the parent.
+[agents]
+enabled = true
+max_concurrent_threads_per_session = 3

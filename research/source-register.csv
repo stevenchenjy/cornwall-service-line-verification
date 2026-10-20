@@ -1,0 +1,5 @@
+source_id,title,url,format,status,notes
+nys-lsli-data,New York State Lead Service Line Inventory,https://health.data.ny.gov/resource/j63k-4n92.json,json,api_preflight,Query lower(locality) = 'cornwall-on-hudson'; snapshot is not current unique service-line count
+nys-lsli-metadata,Dataset metadata and data dictionary,https://health.data.ny.gov/api/views/j63k-4n92.json,json,source_opened,Possible public-side description misalignment; dataset-level timestamp only
+local-verification,Lead Service Lines and Service Line Replacement Project,https://cornwall-on-hudson.gov/Departments/Water/Lead-Service-Lines,html,source_text_checked,Resident self-inspection and department appointment options; no outreach authorized
+sohail-2026-preprint,Auditing Recorded Predictive Lead Service-Line Classifications Against Physical Verification: A Statewide Study of New York,https://arxiv.org/abs/2608.19922,html,metadata_checked,Muhammad Sarmad Sohail; submitted 2026-08-20; preprint; full paper and code not yet reviewed

@@ -1,0 +1,58 @@
+import csv
+import json
+import hashlib
+import sys
+from collections import Counter
+from _common import ROOT, utc_now
+sys.path.insert(0, str(ROOT / 'src'))
+from inventory_audit import audit, address_key, gap
+
+def main():
+    receipt_path = ROOT / 'data/manifests/inventory-snapshot.json'
+    if not receipt_path.exists():
+        raise SystemExit('No accepted snapshot. Run make fetch first.')
+    receipt = json.loads(receipt_path.read_text())
+    data = (ROOT / receipt['combined_path']).read_bytes()
+    if hashlib.sha256(data).hexdigest() != receipt['combined_sha256']:
+        raise SystemExit('Snapshot hash mismatch; stop and inspect local data.')
+    rows = json.loads(data)
+    result = audit(rows)
+    result.update(generated_at_utc=utc_now(), snapshot_sha256=receipt['combined_sha256'], where=receipt['where'], stage='bootstrap_diagnostic',
+                  limitation='Counts describe public raw records, not current unique households or service lines.')
+    (ROOT / 'reports/preflight.json').write_text(json.dumps(result,indent=2)+'\n', encoding='utf-8')
+    lines = ['# Setup preflight — service-line inventory','',f"Generated at {result['generated_at_utc']}.",'',
+             f"Query: `{receipt['where']}`. Raw rows: **{result['raw_rows']}**. Category Unknown: **{result['unknown_category_rows']}**.",
+                 'Counts describe public raw records, not current unique households or service lines.','',
+                 'Source: [NYS inventory API](https://health.data.ny.gov/resource/j63k-4n92.json); [exact query, snapshot SHA256 and retrieval receipts](../data/manifests/inventory-snapshot.json).', '',
+             '| Gap within raw category Unknown | Raw records |','|---|---:|']
+    for k,v in sorted(result['unknown_gap_buckets'].items()):
+        lines.append(f'| {k} | {v} |')
+    lines += ['',f"Rows needing public-side material evidence: **{result['unknown_rows_needing_public_material']}**.",
+              f"Resident-only completion raw-record upper bound, assuming acceptable evidence and already reported-known public side: **{result['resident_only_completion_raw_row_upper_bound']}**.",
+              'This is not a predicted field success count or confirmation of adequate public-side verification.','',
+              '| Duplicate-key definition | Repeated key groups | Rows in groups | Excess rows |','|---|---:|---:|---:|']
+    for label,key in [('Exact address + ZIP','exact_address_zip_duplicates'),('NFKC / whitespace / casefold only; units and punctuation retained','conservative_normalized_duplicates')]:
+        d=result[key]
+        lines.append(f"| {label} | {d['repeated_key_groups']} | {d['rows_in_repeated_groups']} | {d['excess_rows']} |")
+    lines += ['', 'Duplicate groups are review candidates; no rows were removed or merged.',
+              f"Non-Unknown category rows with unknown/missing/unmapped material on at least one side: {result['nonunknown_category_rows_with_unknown_or_missing_material']}.",
+              'Some metadata public-side descriptions appear misaligned with display names. The provisional mapping uses names and observed value types; departmental semantic confirmation remains pending.','',
+              '## Remaining work','',
+              '- Confirm PWS boundary, stable service-line identifiers, row freshness and duplicate policy.',
+              '- Check reported-known material against acceptable verification evidence.',
+              '- Calibrate contact rates, accepted evidence rates, time/cost and joint completion.',
+              '- Review equity and aggregation before maps or resource recommendations.',
+              '- No optimal strategy, current unique line total or individual risk estimate is established.']
+    (ROOT / 'reports/preflight.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+    counts = Counter(address_key(r,True) for r in rows if address_key(r,True) is not None)
+    with (ROOT / 'data/restricted/duplicate-review.csv').open('w',newline='',encoding='utf-8') as stream:
+        fields=['snapshot_sha256','snapshot_row_1based','street_address','zip_code','sl_category','gap','review_status']
+        writer=csv.DictWriter(stream,fieldnames=fields,lineterminator='\n'); writer.writeheader()
+        for i,row in enumerate(rows,1):
+            if counts.get(address_key(row,True),0)>1:
+                writer.writerow(dict(snapshot_sha256=receipt['combined_sha256'],snapshot_row_1based=i,
+                                     street_address=row.get('street_address',''),zip_code=row.get('zip_code',''),sl_category=row.get('sl_category',''),gap=gap(row),review_status='unresolved_do_not_merge'))
+    print(f"Created aggregate preflight: {result['raw_rows']} raw rows / {result['unknown_category_rows']} Unknown. Duplicate review stays local-only.")
+
+if __name__ == '__main__':
+    main()

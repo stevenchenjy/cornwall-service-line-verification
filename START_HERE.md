@@ -4,6 +4,8 @@ Read [AGENTS.md](AGENTS.md), [status](research/STATUS.md), the [baseline audit](
 
 The next stage is **departmental data intake and independent workflow validation**. Use the [request draft](research/department-request.md), [intake/selection-bias plan](research/data-intake-plan.md) and [review checklist](research/independent-review-checklist.csv). No correspondence has been sent.
 
+Commander evidence package: the [intake handoff](research/intake-handoff.md) now includes a usable route for every pending human/departmental case and the next three owner/dependency actions. The request starts with existing records and definitions; detailed exports are conditional. The [empirical decision protocol](research/data-intake-plan.md#evidence-level-decision-protocol) defines the full/partial/no-operations endpoints. The coordinating lead prepares the shared introduction; this repository supplies the service-line technical attachment.
+
 The [official-source review](reports/official-guidance-review.md) and [intake handoff](research/intake-handoff.md) supply documented field support, empty baseline/crosswalk/log-coverage headers and exact review/advance conditions. The original guidance inspection was inline AI self-review; the later [independent AI methods report](reports/independent-methods-review-156ef21.md) and [correction response](research/methods-review-response-156ef21.md) have separate attribution. Local acceptance rules, dated identity and operational measurements remain absent, and human/departmental review remains pending.
 
 ## Next research prompt

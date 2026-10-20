@@ -30,7 +30,7 @@
     "customer_sl_material": {}
   },
   "nonunknown_category_rows_with_unknown_or_missing_material": 1,
-  "generated_at_utc": "2026-10-20T17:23:59.943945+00:00",
+  "generated_at_utc": "2026-10-20T17:57:39.593237+00:00",
   "snapshot_sha256": "4574039b03f11efcf085206f9b3fcb12c32b2ffb9827869829ab2d9f3d73083a",
   "where": "lower(locality) = 'cornwall-on-hudson'",
   "stage": "department_data_intake_preparation",

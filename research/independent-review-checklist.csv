@@ -7,7 +7,7 @@ R05,Stale or other-case decision record,Defer; preserve validation error and eff
 R06,Direct overwrite of accepted category,Reject ordinary path; require explicit correction,pending,,,,,,,,
 R07,Valid superseding correction,Preserve old/new decisions and side states; one case counted once,pending,,,,,,,,
 R08,Missing unsuccessful attempts or staff effort,Calibration/comparison remains gated,pending,,,,,,,,
-R09,Galvanized category with incomplete upstream history,Require applicable historical evidence and reviewed rule; current material pair alone is insufficient to validate local policy,pending,,,,,,,,
+R09,Galvanized category with incomplete upstream history,Apply authorized rule's historical-evidence or documented presumption treatment; preserve unresolved history; require case-matching validated decision,pending,,,,,,,,
 R10,Template-computed or predictive category without an applicable approval/decision,Preserve reported category; keep curated acceptance pending until substantive rule/decision validation,pending,,,,,,,,
 R11,Segment extent differs from ownership,Confirm main-to-curb and curb-to-building interpretation with local export; do not infer eligibility from column ownership labels,pending,,,,,,,,
 R12,Initial stock versus period acceptance and correction count,Count new accepted cases once; keep preexisting classifications and later corrections separate; audit person-time and shared effort,pending,,,,,,,,

@@ -2,6 +2,8 @@
 
 Prepared October 20, 2026. This packet can be reviewed without running a model. No request has been sent and no departmental export, local rule, real decision bundle or independent human review has been received. Empty templates contain headers only; complete them in ignored `data/restricted/`, never in the public seed directory. Existing department formats may be mapped instead.
 
+Current milestone: the [unsent technical request](department-request.md) now starts with existing definitions, aggregate records and recording availability, with detailed exports conditional on what is held. The [empirical decision protocol](data-intake-plan.md#evidence-level-decision-protocol) states what full, partial or absent operational evidence can support. This handoff contains the complete 12-case human/departmental review route; all cases remain pending. The failed-correction schema finding is closed by the separate [independent AI re-review](../reports/independent-methods-rereview-156ef21.md), without supplying human or local-rule validation.
+
 ## 1. Dated identity and baseline
 
 Use the [baseline header](../data/seed/service-line-baseline-template.csv) for one current record per department-confirmed `(pws_id, case_id)` at an agreed `baseline_as_of`. Preserve earlier versions in original exports. A baseline date is the inventory cut-off; `line_record_as_of` is the row's documented observation/update date and may be null. Do not substitute the API dataset timestamp for either.
@@ -51,6 +53,31 @@ Run `make check` to inspect synthetic contract behavior. Relevant cases in `test
 
 For each case record actual reviewer ID/role, date, `review_mode` (`independent_human`, `department_authorized`, `independent_ai`, or `inline_ai_self_review`), source hashes/pages inspected, result, limitations and correction reference. A person is required for `human_verified`. Independent AI review must remain labeled AI. Keep the checklist's human/departmental status pending until that review occurs. The original source inspection was inline self-review. The later [independent AI artifact review](../reports/independent-methods-review-156ef21.md) and [correction response](methods-review-response-156ef21.md) record the separate reviewer, exact scope and findings; they do not validate real cases or close human/departmental gates.
 
+### Usable review route for all 12 cases
+
+Start with the [12-row checklist](independent-review-checklist.csv) and the table below. Read R09-R11 first to identify rule/representation gaps, then R01-R07 for the decision path, and R08/R12 for denominator and effort coverage. A person can cover several cases; independent technical inspection and authorized confirmation of local rules have different scopes. Review only records the person is permitted to access. An absent input is a recorded limitation, not a failed household or a zero.
+
+Use the receipt in [the guidance manifest](../data/manifests/official-guidance-intake.json) to match the local source hash before inspecting a physical PDF page. [Evidence IDs](official-source-evidence.csv) retain the exact URL, UTC retrieval timestamp, issue date, page/section, unit and derivation. This route reuses the pinned sources; it does not assert that the archived version remains applicable. System-summary Sections I/III/V establish published labels/certification, not row dates or identity. If an original is unavailable to the reviewer, keep source verification pending rather than silently substitute a newer version.
+
+| Case | Person's inspection and required inputs | Acceptable review result / stop condition |
+|---|---|---|
+| R01 | Inspect an unsupported Non-Lead decision against both initial side states and the actual rule; compare the synthetic unsupported-acceptance test. | Unsupported acceptance stays pending/deferred, with effort/error retained. A material label or reference alone cannot authorize acceptance. |
+| R02 | Trace records work, resident submission and separate assessment, with event order and before/after evidence states; NY-G05, guidance p. 12. | Resident assistance remains possible after public-side work; submission is distinct from accepted evidence and final classification. Confirm the real workflow before calibration. |
+| R03 | Inspect rejected/deferred reviews, including failed corrections with null/partial/omitted metadata; run the schema regressions if useful. | Preserve the existing category/evidence and all measured effort. Do not invent correction metadata. Accepted corrections must still meet R07. |
+| R04 | Authorized person checks a case-matching original decision, pinned rule/version and sufficient evidence, including any history required for that category. | Document the accepted category once with reviewer authority and source scope. A structurally valid synthetic bundle demonstrates software only. |
+| R05 | Compare stale/other-case IDs, baseline and evidence fingerprint with the reviewed decision. | Defer mismatches and retain error/effort; hashes alone do not authenticate authority. |
+| R06 | Inspect an attempted ordinary overwrite of an already accepted category and the local correction procedure. | Ordinary acceptance cannot overwrite; route any replacement through explicit correction review. |
+| R07 | Inspect old/new decisions, superseded ID, reason, replacement evidence and failed-correction history. | An accepted correction retains immutable old/new history, changes category only with support and never creates a second newly classified case. |
+| R08 | Compare native logs with the coverage header for a defined period, including failed contact, retries, review outcomes and missing time. | State which denominators/costs are complete. If unsuccessful work or effort is missing, withhold the corresponding probability or efficiency estimate. |
+| R09 | Authorized person reviews upstream history and the applicable GSLRR rule's documented evidence or presumption treatment; NY-G01/NY-G06, guidance pp. 1 and 7; dictionary p. 3. | Preserve unresolved history distinctly and apply the authorized rule's treatment of it. Keep curated acceptance pending when applicable authority, required evidence, the case-matching decision or adequate representation is missing. |
+| R10 | Inspect the source of a computed/predictive category, applicable approval and current case decision; NY-G02/NY-G07/NY-G08, guidance pp. 7-8 and 11. | Preserve the reported category; do not infer local approval from a template, model, building age or generic guidance. |
+| R11 | Compare actual local export definitions with segment and ownership records; NY-G03, guidance p. 9; NY-D01-NY-D05, dictionary p. 2. | Confirm main-to-curb and curb-to-building extent independently of ownership; leave ambiguous mapping unresolved. |
+| R12 | Reconcile dated starting stock with distinct period cases, event order, final decisions, corrections and person-time/shared work. | Count newly accepted cases once; report preexisting stock, corrections and follow-up separately. No stock difference becomes an attempt success rate. |
+
+For each inspection, enter the actual reviewer ID/role/date, mode, hashes/pages or restricted source locators, result and limits in the existing CSV. Add a correction reference if needed. Keep real evidence and detailed comments restricted; only a nonsensitive completion summary is public. If only synthetic artifacts were inspected, record that limited result explicitly and leave local-policy/real-case validation pending. All 12 rows are still `pending` in this packet; an AI pass cannot fill a human/departmental sign-off.
+
+R09 documentary clarification: the archived v3 guidance's GSLRR definition (physical p. 1) and item 10 (physical p. 7) include a presumption when a system cannot demonstrate the galvanized line was never downstream of lead. Unresolved history therefore does not universally force deferral. A generic archived presumption cannot authenticate a current local decision: obtain the applicable authorized rule, preserve the unresolved history and documented presumption separately from observed material, and validate the case-matching decision. The engine does not itself adjudicate historical conditions or presumptions. This clarification addresses the new independent review's R09 finding; the earlier correction-schema finding remains closed.
+
 ## 4. First defensible comparison: release conditions
 
 | Gate | Exact evidence still needed |
@@ -63,3 +90,13 @@ For each case record actual reviewer ID/role, date, `review_mode` (`independent_
 | Resources and review | Actual common staff-time/cost constraint, coverage priorities and completed independent/authorized workflow review. |
 
 If these cannot be supplied, stop at the reproducible public-record audit and conditional workflow/intake specification. No local rate, strategy ranking, pilot sample size or preferred allocation follows from this packet. Departmental/resident contact, request submission and field activity remain unauthorized.
+
+## 5. Evidence-stage handoff and next actions
+
+| Priority / owner | Next action and acceptance criterion | Dependency |
+|---|---|---|
+| 1 / user and coordinating lead | Review the shared introduction and this technical attachment; select recipient, scope and permitted transfer route. An approved package must preserve separate project requests and privacy limits. | Explicit user authorization before any transmission; this packet is unsent. |
+| 2 / authorized departmental record owner, then research lead | Establish what existing inventory, definitions/rules, workflow and coverage records are held; pin received originals and document the full/partial/no-record branch. | Approved contact/receipt arrangements; no retrospective creation of missing logs or time. |
+| 3 / independent human reviewer and authorized rule reviewer | Complete the scoped 12-case checks above, record exact inputs/results and resolve representation gaps before changing any empirical gate. | Access to relevant originals and, for local applicability/real decisions, actual authoritative records. |
+
+Human review readiness: the route and pinned inputs are prepared; actual human inspection and restricted local inputs are absent. Intake readiness: ready for user approval and an availability-first request; transmission is unauthorized. Empirical readiness: public-record diagnostics and contract checks only at present; use the [evidence-level protocol](data-intake-plan.md#evidence-level-decision-protocol) after receipt. External strategy recommendations: gated; all eight empirical gates remain unconfirmed. No map, new runtime, optimizer or prospective pilot is needed to use this packet.

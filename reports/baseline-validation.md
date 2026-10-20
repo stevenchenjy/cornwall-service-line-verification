@@ -1,6 +1,6 @@
 # Public inventory snapshot validation
 
-Generated at 2026-10-20T17:23:59.943945+00:00.
+Generated at 2026-10-20T17:57:39.593237+00:00.
 
 Query: `lower(locality) = 'cornwall-on-hudson'`. Raw rows: **1110**. Category Unknown: **808**.
 Counts describe public raw records, not current unique households or service lines.

@@ -1,11 +1,11 @@
 # Draft questions — not sent
 
-- Cornwall-on-Hudson locality 的哪些记录属于贵系统？是否还存在其他 locality 但属于贵系统的服务管线？可否提供 PWS ID 与当前服务边界？
-- 是否有当前、含稳定 service-line ID、更新时间、公共/住户两侧材质与证据方法的台账？公开重复地址代表多单元、不同管线、不同版本还是提交重复？
-- 请确认 current_public_side_sl、public_sl_material、customer_sl_material 和 sl_category 的字段含义、Known Other/GSLRR 等标签与接受的证据标准。
-- 居民自查、档案查询和现场检查各平均耗时、联系成功率、证据审核成功率和复查需求是多少？能否先做小型经授权的校准样本？
-- 一次上门能检查哪一侧？双侧检查是否受可达性、开挖或预约限制？是否有合并任务节约工时？
-- 部门希望按什么规则兼顾成本、公平性、验证可靠性和法规时限？这些目标不能仅由模型替部门决定。
-- 是否已有相同的工作分配分析？可以公开哪一级汇总地图和哪些已有资料？
+- Which Cornwall-on-Hudson locality records belong to your water system? Are lines in other localities also part of it? Can you provide the PWS ID and current service boundary?
+- Is a current inventory available with stable service-line IDs, update dates, material labels and evidence methods for both sides? Do repeated public addresses represent multiple units, separate lines, versions or duplicate submissions?
+- Please confirm current_public_side_sl, public_sl_material, customer_sl_material and sl_category, the meanings of Known Other/GSLRR, and acceptable verification evidence.
+- What are the typical staff times, contact rates, evidence-acceptance rates and recheck requirements for resident self-inspection, records review and field inspection? Could a small, separately authorized pilot calibrate these parameters?
+- Which side can be checked during one visit? Do access, excavation or appointments limit joint inspection? Can combined tasks save staff time?
+- How should the department balance cost, fairness, evidence reliability and regulatory deadlines? The model cannot choose these priorities on the department's behalf.
+- Has a similar work-allocation analysis already been completed? Which existing information and geographic aggregation levels may be shared publicly?
 
-本文件是草稿，未向部门或居民发送；不要求居民自行挖掘公共管段。
+This is an unsent draft. It does not authorize contact with officials or residents or ask residents to excavate public-side lines.

@@ -2,7 +2,7 @@
 
 Title: **Resolving Unknown Water Service Materials in Cornwall: A Comparison of Verification Strategies**
 
-Question: 在有限工时或预算下，居民自查、公共管段档案核查与现场检查应如何组合，才能让更多完整服务管线获得可靠分类？
+Question: Under limited staff time or budget, how should resident self-inspection, public-side records review and field inspection be combined to obtain reliable classifications for more complete water service lines?
 
 These are leads from the user's superficial research, not an independent review or department confirmation.
 User API precheck: 1,110 raw Cornwall-on-Hudson rows; 808 category Unknown; 575 both sides unknown, 176 public side unknown/customer side known, 57 public known/customer unknown; 751 need public-side evidence. 43 address+ZIP keys repeat; definition needs reproduction. Intended outputs: aggregate information-gap map, budget scenarios and local-only department review queue. Existing 2026 preprint is a novelty/context lead; its existence and actual scope need verification, not adoption as peer-reviewed evidence.

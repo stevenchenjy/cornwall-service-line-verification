@@ -1,14 +1,14 @@
 # Resolving Unknown Water Service Materials in Cornwall: A Comparison of Verification Strategies
 
-独立研究工作区 · 初始搭建日期：2026-10-19（America/New_York）
+Independent research workspace. Established October 19, 2026 (America/New_York).
 
-在有限工时或预算下，居民自查、公共管段档案核查与现场检查应如何组合，才能让更多完整服务管线获得可靠分类？
+Under limited staff time or budget, how should resident self-inspection, public-side records review and field inspection be combined to obtain reliable classifications for more complete water service lines?
 
-**当前阶段：研究前基础搭建。** 这不是已完成的研究，也不是供水部门已确认的数据产品。
+**Current stage: research preparation.** The workspace contains a reproducible starting point; the study and departmental validation remain pending.
 
-从 [START_HERE.md](START_HERE.md) 进入。研究范围见 [research/brief.md](research/brief.md)，下一步见 [research/TASKS.md](research/TASKS.md)，agent 分工见 [agents/README.md](agents/README.md)。
+Start with [START_HERE.md](START_HERE.md). See the [research brief](research/brief.md), [task board](research/TASKS.md), [agent roles](agents/README.md) and [initial data diagnostic](reports/preflight.md).
 
-## 快速开始
+## Quick start
 
 ```sh
 uv sync --locked
@@ -17,15 +17,19 @@ make fetch
 make preflight
 ```
 
-`make fetch` 访问公开原始来源并保存本地快照；`make preflight` 生成搭建期诊断。原始文件和行级衍生数据不提交 Git。克隆仓库后需重新抓取本地原始数据。Python 3.11+；依赖记录在 `uv.lock`。
+`make fetch` saves local snapshots of public sources. `make preflight` generates a preparation-stage diagnostic. Raw files and record-level derivatives stay outside Git. After cloning, fetch the raw sources locally before running the diagnostic. Python 3.11 or later is required; resolved dependencies are recorded in `uv.lock`.
 
-## 目录
+## Workspace contents
 
-- `.codex/agents/`：项目范围的真实 Codex custom-agent 配置，继承用户模型和权限。
-- `research/`：研究范围、分析计划、证据／来源清单、任务和决策。
-- `data/seed/`、`data/schema/`、`data/manifests/`：可版本控制的种子表、结构和抓取收据。
-- `data/raw/`、`data/interim/`、`data/processed/`、`data/restricted/`：只在本地保留的原始或行级数据。
-- `src/`、`scripts/`、`tests/`：可复现方法与关键研究口径检查。
-- `reports/`：可以审阅的汇总结果；不含逐户地址或坐标。
+- `.codex/agents/`: project-scoped Codex custom-agent definitions that inherit the parent's model and permissions.
+- `research/`: scope, analysis plan, source and claim registers, tasks and decisions.
+- `data/seed/`, `data/schema/`, `data/manifests/`: versioned seed observations, field definitions and retrieval receipts.
+- `data/raw/`, `data/interim/`, `data/processed/`, `data/restricted/`: local-only originals and record-level working files.
+- `src/`, `scripts/`, `tests/`: reproducible methods and checks for consequential accounting and inventory assumptions.
+- `reports/`: reviewable aggregate outputs without household addresses or coordinates.
 
-研究拟服务 Cornwall-on-Hudson Water Department；尚未取得部门台账或联系部门。AI 协助搭建和分析须在将来对外成果中披露。无自动监控、无人值守研究或后台模型任务。
+## Working language and research status
+
+English is the required language for authored documents, agent instructions, reports, prompts and user-facing responses. `make check` includes a language regression check for authored workspace files. Original evidence remains immutable.
+
+The intended user is the Cornwall-on-Hudson Water Department. Departmental cooperation and access to internal records have not been established. Future external reports must disclose AI assistance. Agents run only when invoked; no recurring monitor or background research task has been scheduled.

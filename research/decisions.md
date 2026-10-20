@@ -7,3 +7,4 @@
 | 2026-10-19 | No model override, global config change or continuous agents | Inherit user's account settings and avoid unsolicited ongoing runs |
 | 2026-10-19 | Complete setup and preflight only | User asked for foundations before starting substantive work |
 | 2026-10-19 | Source year and evidence status explicit | Preliminary claims are not automatically promoted to verified results |
+| 2026-10-19 | English throughout authored content and future responses | User explicitly requested English across GitHub, Codex and local documents; preserve source evidence and numeric results |

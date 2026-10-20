@@ -4,7 +4,7 @@
 
 Work only on this project. Read START_HERE.md, research/brief.md, research/STATUS.md and research/TASKS.md first.
 Preserve the user's specific research question and distinguish a setup preflight from substantive research.
-User-visible language follows the user; English technical names and original source wording may be retained.
+Use English for every user-facing response, chat title, authored document, report, prompt and agent description or instruction. This is a persistent user preference; do not switch languages merely because an earlier message or a source uses another language. Change this preference only when the user explicitly requests a different language. Preserve raw source evidence verbatim; provide any needed interpretation in English.
 Do not claim causal explanations, novelty, department endorsement or current utility counts without evidence.
 
 ## Evidence and reproducibility

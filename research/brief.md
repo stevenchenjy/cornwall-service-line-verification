@@ -1,11 +1,13 @@
 # Research brief
 
-RQ: 在限定工时或预算下，居民自查、公共管段档案核查与现场检查如何组合，使更多完整服务管线获得可接受的可靠分类？
+**Research question:** Under limited staff time or budget, how should resident self-inspection, public-side records review and field inspection be combined to obtain acceptable, reliable classifications for more complete water service lines?
 
-方法：公开台账数据审计 + 透明的资源配置情景比较。主要结果是完整记录／整条管线分类得到解决的数量；单侧补充、联系和检查次数为过程指标。
+**Method:** Public-inventory audit followed by a transparent comparison of resource-allocation scenarios. The primary outcome is resolved complete-record/complete-line classification. One-side completion, contacts and inspection attempts are process measures.
 
-初始查询限定 `lower(locality) = 'cornwall-on-hudson'`。locality 只是所在地，不代表全部 Cornwall 或某一个供水系统。州公开结构没有明确 PWS 编号和逐行更新日期；供水系统边界、当前性和唯一管线数须经部门台账确认。
+**Initial query boundary:** `lower(locality) = 'cornwall-on-hudson'`. Locality indicates a place, not the whole of Cornwall or a unique water system. The public structure lacks an explicit PWS ID and row-level update date. Confirm system membership, currency and unique-line counts against departmental records.
 
-范围内：字段含义、原始类别、双侧信息缺口、重复候选、验证方法证据和预算情景。范围外：预测居民健康风险、把 Unknown 当成铅管、自动认定独立住户数、未校准成功率下宣布最佳策略、未经授权的居民联系或现场检查。
+**In scope:** Field semantics, original categories, material gaps on both sides, duplicate candidates, verification-method evidence and budget scenarios.
 
-预期成果：汇总缺口表和适当粒度的地图、策略情景结果、可复现代码、供部门复核的本地记录队列和待核对问题。只有经确认且足够汇总的地理结果才考虑对外展示。
+**Out of scope:** Predicting resident health risk, treating Unknown as confirmed lead, automatically counting unique households, announcing a best strategy from uncalibrated rates, or unauthorized resident contact and fieldwork.
+
+**Planned outputs:** Aggregate gap tables and an appropriately aggregated map, scenario results, reproducible code, a local-only departmental review queue and follow-up questions. Review the geographic aggregation and evidence before any public map.

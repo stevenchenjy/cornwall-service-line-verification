@@ -12,4 +12,5 @@ jobs:
           python-version: '3.13'
       - run: python -m unittest discover -s tests -v
       - run: python scripts/validate_setup.py
+      - run: python scripts/check_language.py
 # Offline checks use synthetic fixtures; CI never downloads row-level inventory.

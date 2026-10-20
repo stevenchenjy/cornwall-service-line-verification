@@ -33,3 +33,7 @@ make preflight
 English is the required language for authored documents, agent instructions, reports, prompts and user-facing responses. `make check` includes a language regression check for authored workspace files. Original evidence remains immutable.
 
 The intended user is the Cornwall-on-Hudson Water Department. Departmental cooperation and access to internal records have not been established. Future external reports must disclose AI assistance. Agents run only when invoked; no recurring monitor or background research task has been scheduled.
+
+## Public access and data handling
+
+This repository is public at the user's request. It contains reviewed project documents, code, source/retrieval receipts, schemas and aggregate diagnostics. Raw source snapshots, household addresses, precise coordinates and duplicate-review queues remain local-only. The public repository is a research-preparation workspace; its diagnostics are not a final study or departmental validation.

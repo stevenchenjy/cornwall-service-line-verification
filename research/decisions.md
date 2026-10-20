@@ -8,3 +8,4 @@
 | 2026-10-19 | Complete setup and preflight only | User asked for foundations before starting substantive work |
 | 2026-10-19 | Source year and evidence status explicit | Preliminary claims are not automatically promoted to verified results |
 | 2026-10-19 | English throughout authored content and future responses | User explicitly requested English across GitHub, Codex and local documents; preserve source evidence and numeric results |
+| 2026-10-19 | Make reviewed GitHub workspace content public at the user's explicit request | Supersedes the initial private-default decision; inspect all published history and keep raw/record-level data local-only |

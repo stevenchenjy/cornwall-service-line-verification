@@ -24,7 +24,7 @@ Assign each agent a concrete artifact and exclusive write paths. Reviewers are r
 
 ## Data handling and external actions
 
-GitHub is private by default. Keep raw files and all row-level inventory/address/coordinate/duplicate queues in Git-ignored local directories.
+This GitHub repository is public at the user's explicit request on October 19, 2026. Publish only reviewed code, authored documents, source/retrieval receipts, schemas and aggregate diagnostics. Keep raw files and all row-level inventory/address/coordinate/duplicate queues in Git-ignored local directories.
 Commit code, source registers, aggregate summaries and documented assumptions. Review staged paths and contents before every push.
 Do not contact residents or officials, send mail, submit records, schedule automations, change repository visibility or publish address maps without explicit user instruction.
 School/Green Team roles, if later requested, should be limited to department-approved records work and communication; do not assign field inspections here.

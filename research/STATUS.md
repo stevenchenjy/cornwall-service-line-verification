@@ -13,3 +13,5 @@ Required before a final study: reconcile source definitions, resolve relevant da
 Local `make check` passed: 8 domain checks plus 2 language regression cases and structure/TOML validation. Custom-agent runtime dispatch has not been exercised; configuration files follow the current official schema.
 
 Language policy: English throughout all authored content, agent instructions, prompts and future responses. Earlier conversation messages and historical commits remain historical records.
+
+Repository access: public, explicitly requested by the user on October 19, 2026. Anonymous GitHub API access was verified. Raw evidence and record-level working files remain local-only.
